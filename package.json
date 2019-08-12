@@ -1,0 +1,8 @@
+{
+    "name": "iambalaam.com",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/iambalaam/iambalaam.com.git",
+    "author": "Guy Balaam <guybal@amazon.com>",
+    "license": "MIT"
+}
