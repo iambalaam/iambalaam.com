@@ -4,5 +4,7 @@
     "main": "index.js",
     "repository": "https://github.com/iambalaam/iambalaam.com.git",
     "author": "Guy Balaam <guybal@amazon.com>",
-    "license": "MIT"
+    "devDependencies": {
+        "@cloudflare/wrangler": "^1.1.1"
+    }
 }
