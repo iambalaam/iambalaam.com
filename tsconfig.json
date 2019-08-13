@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "target": "ESNext",
+        "module": "commonjs",
+        "lib": [
+            "es2015",
+            "webworker"
+        ],
+    },
+    "include": [
+        "src/*"
+    ]
+}
