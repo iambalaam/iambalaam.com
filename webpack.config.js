@@ -1,8 +1,11 @@
 const { resolve } = require('path');
 
 module.exports = {
-    entry: resolve(__dirname, 'src', 'index.ts'),
+    entry: resolve(__dirname, 'src'),
     mode: 'production',
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js']
+    },
     module: {
         rules: [
             {

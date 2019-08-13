@@ -2,6 +2,7 @@
     "compilerOptions": {
         "strict": true,
         "target": "ESNext",
+        "jsx": "react",
         "module": "commonjs",
         "lib": [
             "es2015",
