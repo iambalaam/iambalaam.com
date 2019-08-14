@@ -5,7 +5,8 @@
     "repository": "https://github.com/iambalaam/iambalaam.com.git",
     "author": "Guy Balaam <guybal@amazon.com>",
     "scripts": {
-        "test:webpack": "webpack"
+        "test": "echo \"no unit tests\"",
+        "build": "webpack"
     },
     "devDependencies": {
         "@cloudflare/wrangler": "^1.1.1",
