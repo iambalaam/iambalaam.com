@@ -2,6 +2,7 @@ name: release
 on: [push]
 
 jobs:
+
   build:
     runs-on: ubuntu-latest
     steps:
@@ -14,4 +15,19 @@ jobs:
           yarn install
           yarn test
           yarn build
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: 12
+      - run: |
+          npm install -g yarn
+          yarn install
+          CF_API_KEY=${{secrets.CF_API_KEY}} CF_EMAIL=${{secrets.CF_EMAIL}} npx wrangler publish --release
+
+
       
