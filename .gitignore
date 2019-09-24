@@ -1,3 +1,6 @@
+# Node dependencies
 node_modules/
+# Build artifacts placed in dist/
 dist/
+# Wrangler preview builds to worker/
 worker/

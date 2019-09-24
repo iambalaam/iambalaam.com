@@ -19,9 +19,9 @@ const head = ({ title, desc }: PageArgs) => `\
 
 const body = ({ content }: PageArgs) => `\
 <body>
-    <main>
+    <div id="root">
         ${content}
-    </main>
+    </div>
 </body>
 `;
 
