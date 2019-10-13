@@ -8,7 +8,7 @@ const NotFound: React.SFC<RouteProps> = (props: RouteProps) => {
     return (
         <main>
             <h1>Page not found</h1>
-            <p>I'm sorry, I haven't made {page} yet!</p>
+            <p>Apologies, I haven't made {page} yet!</p>
         </main>
     )
 }

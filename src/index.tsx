@@ -16,7 +16,7 @@ const handleEvent = async (event: FetchEvent) => {
     return new Response(htmlDocument({
         title: 'iambalaam.com',
         desc: 'The newest and greatest site on the web!',
-        content: content
+        content
     }), { status: 200, headers: { 'content-type': 'text/html; charset=UTF-8' } });
 }
 self.addEventListener('fetch', (event) => {

@@ -2,6 +2,7 @@ import * as express from 'express';
 import * as React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server'
 import { StaticRouter } from 'react-router'
+import htmlDocument from '../../src/html';
 import App from '../../src/App';
 
 const PORT = process.env.port || 3000;
@@ -13,7 +14,11 @@ server.get('*', (request, response) => {
             <App />
         </StaticRouter>
     );
-    response.send(content);
+    response.send(htmlDocument({
+        title: 'Dev Server',
+        desc: 'Placeholder description',
+        content
+    }));
 });
 
 server.listen(PORT, () => {

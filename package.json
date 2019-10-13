@@ -6,6 +6,7 @@
     "author": "Guy Balaam <guybal@amazon.com>",
     "scripts": {
         "test": "echo \"no unit tests\"",
+        "start": "yarn start:server",
         "start:server": "nodemon -x ts-node dev/server/dev-server.tsx",
         "build": "webpack"
     },
