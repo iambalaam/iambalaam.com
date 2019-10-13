@@ -3,11 +3,16 @@ declare var self: CloudflareWorkerGlobalScope;
 
 import * as React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import App from './App';
+import { StaticRouter } from 'react-router';
 import htmlDocument from './html';
+import App from './App';
 
 const handleEvent = async (event: FetchEvent) => {
-    const content: string = renderToStaticMarkup(<App event={event} />);
+    const content: string = renderToStaticMarkup(
+        <StaticRouter location={event.request.url} >
+            <App />
+        </StaticRouter>
+    );
     return new Response(htmlDocument({
         title: 'iambalaam.com',
         desc: 'The newest and greatest site on the web!',
