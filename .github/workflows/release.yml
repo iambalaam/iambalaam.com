@@ -27,3 +27,16 @@ jobs:
         run: yarn build
       - name: publish
         run: CF_API_KEY=${{secrets.CF_API_KEY}} CF_EMAIL=${{secrets.CF_EMAIL}} npx wrangler publish --release
+      - name: upload artifacts
+        run: |
+          rm -rf tmp
+          mv dist tmp
+          git add tmp
+          git stash
+          git checkout dist
+          find . -not -path "./.git/*" -delete
+          git stash pop
+          mv tmp/* .
+          rm -rf tmp
+          git add -A
+          git commit -m "Build artifacts"
