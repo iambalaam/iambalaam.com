@@ -10,17 +10,28 @@ const server = express();
 
 server.get('*', (request, response) => {
     const context: StaticContext = {};
-    const content = renderToStaticMarkup(
-        <StaticRouter location={request.url} context={context} >
-            <App />
-        </StaticRouter>
-    );
-    response.status(context.statusCode || 200);
-    response.send(htmlDocument({
-        title: 'Dev Server',
-        desc: 'Placeholder description',
-        content
-    }));
+    try {
+        const content = renderToStaticMarkup(
+            <StaticRouter location={request.url} context={context} >
+                <App />
+            </StaticRouter>
+        );
+        response.status(context.statusCode || 200);
+        response.send(htmlDocument({
+            title: 'Dev Server',
+            desc: 'Placeholder description',
+            content
+        }));
+    } catch (error) {
+        response.status(500);
+        response.send(htmlDocument({
+            title: 'iambalaam.com',
+            desc: 'Uh oh - something broke',
+            content: process.env.NODE_ENV === 'production'
+                ? '<h1>Uh oh</h1><p>Something broke, <a href="/">go back</a>?</p>'
+                : `<pre>${error.stack || error}</pre>`
+        }))
+    }
 });
 
 server.listen(PORT, () => {
