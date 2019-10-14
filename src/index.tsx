@@ -4,13 +4,15 @@ declare var self: CloudflareWorkerGlobalScope;
 import * as React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { StaticRouter, StaticContext } from 'react-router';
+import { parse } from 'url';
 import htmlDocument from './html';
 import App from './App';
 
 const handleEvent = async (event: FetchEvent) => {
+    const path = parse(event.request.url);
     const context: StaticContext = {};
     const content: string = renderToStaticMarkup(
-        <StaticRouter location={event.request.url} context={context} >
+        <StaticRouter location={path} context={context} >
             <App />
         </StaticRouter>
     );

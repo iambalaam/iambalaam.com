@@ -15,8 +15,7 @@ server.get('*', (request, response) => {
             <App />
         </StaticRouter>
     );
-    const statusCode = context.statusCode || 200;
-    response.status(statusCode);
+    response.status(context.statusCode || 200);
     response.send(htmlDocument({
         title: 'Dev Server',
         desc: 'Placeholder description',
