@@ -27,7 +27,7 @@ const body = ({ content }: PageArgs) => `\
 
 const html = (args: PageArgs) => `\
 <!DOCTYPE html>
-<html "en-GB">
+<html lang="en">
 ${head(args)}
 ${body(args)}
 </html>
