@@ -34,7 +34,7 @@ jobs:
           git add tmp
           git stash
           git checkout dist
-          find . -not -path "./.git/*" -delete
+          find . -not -path "./.git" -not -path "./.git/*" -delete
           git stash pop
           mv tmp/* .
           rm -rf tmp
