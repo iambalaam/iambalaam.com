@@ -1,9 +1,11 @@
 import * as React from 'react';
-import { RouteProps } from 'react-router'
+import { RouteComponentProps } from 'react-router'
 
-const NotFound: React.SFC<RouteProps> = (props: RouteProps) => {
-    const page = props.location
-        ? props.location.pathname
+const NotFound: React.SFC<RouteComponentProps> = (props: RouteComponentProps) => {
+    const { staticContext, location } = props;
+    if (staticContext) staticContext.statusCode = 404;
+    const page = location
+        ? location.pathname
         : 'this page'
     return (
         <main>
