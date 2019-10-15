@@ -26,12 +26,14 @@ jobs:
       - name: build
         run: yarn build
       - name: publish
-        run: CF_API_KEY=${{secrets.CF_API_KEY}} CF_EMAIL=${{secrets.CF_EMAIL}} npx wrangler publish --release
+        run: CF_API_KEY=${{ secrets.CF_API_KEY }} CF_EMAIL=${{ secrets.CF_EMAIL }} npx wrangler publish --release
       - uses: webfactory/ssh-agent@v0.1.1
         with:
-          ssh-private-key: ${{secrets.SSH_PRIVATE_KEY}}
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: upload artifacts
         run: |
+          git config user.name "BUILD"
+          git config user.email "BUILD@GITHUB_ACTIONS"
           rm -rf tmp
           mv dist tmp
           git add tmp
