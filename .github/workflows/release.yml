@@ -45,3 +45,6 @@ jobs:
           rm -rf tmp
           git add -A
           git commit -m "Build artifacts"
+          ls -la
+          git show HEAD
+          git log
