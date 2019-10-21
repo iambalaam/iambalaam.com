@@ -7,8 +7,6 @@ on:
   push:
     branches:
       - master
-      - testing-build-artifacts
-      - testing-is-ssh-needed
 
 jobs:
   release:
