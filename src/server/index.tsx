@@ -2,17 +2,17 @@ import CloudflareWorkerGlobalScope from 'types-cloudflare-worker';
 declare var self: CloudflareWorkerGlobalScope;
 
 import * as React from 'react';
-import { renderToStaticMarkup } from 'react-dom/server';
+import { renderToString } from 'react-dom/server';
 import { StaticRouter, StaticContext } from 'react-router';
 import { parse } from 'url';
 import htmlDocument from './html';
-import App from './App';
+import App from '../App';
 
 const handleEvent = async (event: FetchEvent) => {
     const path = parse(event.request.url);
     const context: StaticContext = {};
     try {
-        const content: string = renderToStaticMarkup(
+        const content: string = renderToString(
             <StaticRouter location={path} context={context} >
                 <App />
             </StaticRouter>
@@ -20,6 +20,7 @@ const handleEvent = async (event: FetchEvent) => {
         return new Response(htmlDocument({
             title: 'iambalaam.com',
             desc: 'The newest and greatest site on the web!',
+            head: '<script src="/dist/dist/hydration.js" defer></script>',
             content
         }), { status: context.statusCode || 200, headers: { 'content-type': 'text/html; charset=UTF-8' } });
     } catch (error) {

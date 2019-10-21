@@ -22,8 +22,8 @@ jobs:
           yarn install
       - name: test
         run: yarn test
-      - name: build
-        run: yarn build
+      - name: release
+        run: yarn release
       - name: publish
         run: CF_API_KEY=${{ secrets.CF_API_KEY }} CF_EMAIL=${{ secrets.CF_EMAIL }} npx wrangler publish --release
       - name: upload artifacts

@@ -5,11 +5,12 @@
         "jsx": "react",
         "module": "commonjs",
         "lib": [
+            "dom",
             "es2015",
             "webworker"
         ]
     },
     "include": [
-        "src/*"
+        "src"
     ]
 }

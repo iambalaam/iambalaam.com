@@ -1,10 +1,11 @@
 export interface PageArgs {
     title: string,
     desc: string,
-    content: string
+    content: string,
+    head?: string
 }
 
-const head = ({ title, desc }: PageArgs) => `\
+const head = ({ title, desc, head }: PageArgs) => `\
 <head>
     <meta charset="utf-8">
     <title>${encodeURIComponent(title)}</title>
@@ -14,6 +15,7 @@ const head = ({ title, desc }: PageArgs) => `\
     <meta property="og:title" content="${title}">
     <meta property="og:description" content="${desc}">
     <meta name="twitter:title" content="${title}">
+    ${head || ''}
 </head>
 `;
 

@@ -1,17 +1,19 @@
 import * as express from 'express';
 import * as React from 'react';
-import { renderToStaticMarkup } from 'react-dom/server'
+import { renderToString } from 'react-dom/server'
 import { StaticRouter, StaticContext } from 'react-router'
-import htmlDocument from '../../src/html';
+import { resolve } from 'path';
+import htmlDocument from '../../src/server/html';
 import App from '../../src/App';
 
 const PORT = process.env.port || 3000;
 const server = express();
 
-server.get('*', (request, response) => {
+server.get('/dist/dist', express.static(resolve(__dirname, '../../', 'dist')));
+server.get('/', (request, response) => {
     const context: StaticContext = {};
     try {
-        const content = renderToStaticMarkup(
+        const content = renderToString(
             <StaticRouter location={request.url} context={context} >
                 <App />
             </StaticRouter>
@@ -20,6 +22,7 @@ server.get('*', (request, response) => {
         response.send(htmlDocument({
             title: 'Dev Server',
             desc: 'Placeholder description',
+            head: '<script src="/dist/dist/hydration.js" defer></script>',
             content
         }));
     } catch (error) {
