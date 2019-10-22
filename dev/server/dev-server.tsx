@@ -22,7 +22,6 @@ server.get('*', (request, response) => {
         response.send(htmlDocument({
             title: 'Dev Server',
             desc: 'Placeholder description',
-            head: '<script src="/static/dist/hydration.js" defer></script>',
             content
         }));
     } catch (error) {

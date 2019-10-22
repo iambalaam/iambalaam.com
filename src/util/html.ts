@@ -15,6 +15,8 @@ const head = ({ title, desc, head }: PageArgs) => `\
     <meta property="og:title" content="${title}">
     <meta property="og:description" content="${desc}">
     <meta name="twitter:title" content="${title}">
+    <link rel="stylesheet" type="text/css" href="/static/dist/main.css">
+    <script type="text/javascript" src="/static/dist/hydration.js" defer></script>
     ${head || ''}
 </head>
 `;
