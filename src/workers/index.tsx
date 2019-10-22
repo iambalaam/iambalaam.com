@@ -5,7 +5,7 @@ import * as React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter, StaticContext } from 'react-router';
 import { parse } from 'url';
-import htmlDocument from './html';
+import htmlDocument from '../util/html';
 import App from '../App';
 
 const handleEvent = async (event: FetchEvent) => {
@@ -20,7 +20,7 @@ const handleEvent = async (event: FetchEvent) => {
         return new Response(htmlDocument({
             title: 'iambalaam.com',
             desc: 'The newest and greatest site on the web!',
-            head: '<script src="/dist/dist/hydration.js" defer></script>',
+            head: '<script src="/static/dist/hydration.js" defer></script>',
             content
         }), { status: context.statusCode || 200, headers: { 'content-type': 'text/html; charset=UTF-8' } });
     } catch (error) {

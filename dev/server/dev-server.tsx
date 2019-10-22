@@ -3,14 +3,14 @@ import * as React from 'react';
 import { renderToString } from 'react-dom/server'
 import { StaticRouter, StaticContext } from 'react-router'
 import { resolve } from 'path';
-import htmlDocument from '../../src/server/html';
+import htmlDocument from '../../src/util/html';
 import App from '../../src/App';
 
 const PORT = process.env.port || 3000;
 const server = express();
 
-server.get('/dist/dist', express.static(resolve(__dirname, '../../', 'dist')));
-server.get('/', (request, response) => {
+server.get('/static/dist', express.static(resolve(__dirname, '../../', 'dist')));
+server.get('*', (request, response) => {
     const context: StaticContext = {};
     try {
         const content = renderToString(
@@ -22,7 +22,7 @@ server.get('/', (request, response) => {
         response.send(htmlDocument({
             title: 'Dev Server',
             desc: 'Placeholder description',
-            head: '<script src="/dist/dist/hydration.js" defer></script>',
+            head: '<script src="/static/dist/hydration.js" defer></script>',
             content
         }));
     } catch (error) {

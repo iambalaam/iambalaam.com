@@ -1,7 +1,7 @@
 const { resolve } = require('path');
 
 module.exports = {
-    entry: resolve(__dirname, 'src', 'server'),
+    entry: resolve(__dirname, 'src', 'workers'),
     output: {
         filename: 'main.js'
     },

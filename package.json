@@ -6,7 +6,7 @@
     "author": "Guy Balaam <guybal@amazon.com>",
     "scripts": {
         "test": "echo \"no unit tests\"",
-        "start": "NODE_ENV=development runst-p clean start:server",
+        "start": "NODE_ENV=development run-p clean start:server",
         "start:server": "nodemon -x ts-node dev/server/dev-server.tsx",
         "release": "NODE_ENV=production run-s clean build",
         "clean": "rm -rf dist && mkdir -p dist",
