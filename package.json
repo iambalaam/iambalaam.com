@@ -8,11 +8,11 @@
         "test": "echo \"no unit tests\"",
         "start": "NODE_ENV=development run-p clean start:server",
         "start:server": "nodemon -x ts-node dev/server/dev-server.tsx",
-        "release": "NODE_ENV=production run-s clean build",
+        "build": "NODE_ENV=production run-s clean webpack",
         "clean": "rm -rf dist && mkdir -p dist",
-        "build": "run-p build:*",
-        "build:server": "webpack --config webpack.server.config.js",
-        "build:client": "webpack --config webpack.client.config.js"
+        "webpack": "run-p webpack:*",
+        "webpack:server": "webpack --config webpack.server.config.js",
+        "webpack:client": "webpack --config webpack.client.config.js"
     },
     "devDependencies": {
         "@cloudflare/wrangler": "^1.1.1",
