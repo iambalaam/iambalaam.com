@@ -36,8 +36,9 @@ jobs:
           mv tmp dist
           git add dist
           git commit -m "Build artifacts"
-          BUILD_COMMIT=$(git rev-parse HEAD)
           git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" dist
           git checkout master
       - name: publish
-        run: BUILD_COMMIT=$BUILD_COMMIT CF_API_KEY=${{ secrets.CF_API_KEY }} CF_EMAIL=${{ secrets.CF_EMAIL }} npx wrangler publish --release
+        run: |
+          echo "Using build commit $(git rev-parse dist)"
+          BUILD_COMMIT=$(git rev-parse dist) CF_API_KEY=${{ secrets.CF_API_KEY }} CF_EMAIL=${{ secrets.CF_EMAIL }} npx wrangler publish --release
