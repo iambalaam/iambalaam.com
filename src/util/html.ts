@@ -15,7 +15,7 @@ const head = ({ title, desc, head }: PageArgs) => `\
     <meta property="og:title" content="${title}">
     <meta property="og:description" content="${desc}">
     <meta name="twitter:title" content="${title}">
-    <script>window.BUILD_COMMIT=${BUILD_COMMIT};</script>
+    <script>window.BUILD_COMMIT='${BUILD_COMMIT}';</script>
     <link rel="stylesheet" type="text/css" href="/static/${BUILD_COMMIT}/dist/main.css">
     <script type="text/javascript" src="/static/${BUILD_COMMIT}/dist/hydration.js" defer></script>
     ${head || ''}
