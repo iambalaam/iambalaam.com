@@ -7,7 +7,6 @@ on:
   push:
     branches:
       - master
-      - build-artifacts-in-dist
 
 jobs:
   release:
