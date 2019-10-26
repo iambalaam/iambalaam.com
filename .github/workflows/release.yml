@@ -33,13 +33,9 @@ jobs:
           git config user.email "BUILD@GITHUB_ACTIONS"
           rm -rf tmp
           mv dist tmp
-          git add tmp
-          git stash
           git checkout dist
-          find . -not -path "./.git" -not -path "./.git/*" -delete
-          git stash pop
+          rm -rf dist
           mv tmp dist
-          rm -rf tmp
-          git add -A
+          git add dist
           git commit -m "Build artifacts"
           git push "https://${{ github.actor	}}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" dist
