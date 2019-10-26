@@ -40,4 +40,4 @@ jobs:
           git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" dist
           git checkout master
       - name: publish
-        run: CF_API_KEY=${{ secrets.CF_API_KEY }} CF_EMAIL=${{ secrets.CF_EMAIL }} npx wrangler publish --release
+        run: BUILD_COMMIT=$BUILD_COMMIT CF_API_KEY=${{ secrets.CF_API_KEY }} CF_EMAIL=${{ secrets.CF_EMAIL }} npx wrangler publish --release

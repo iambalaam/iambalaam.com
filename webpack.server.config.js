@@ -39,6 +39,6 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({ filename: '[name].css' }),
-        new webpack.DefinePlugin({ BUILD_COMMIT })
+        new webpack.DefinePlugin({ BUILD_COMMIT: JSON.stringify(BUILD_COMMIT) })
     ]
 }
