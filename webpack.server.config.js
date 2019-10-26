@@ -2,8 +2,6 @@ const { resolve } = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-console.log('process.env.BUILD_COMMIT');
-console.log(process.env.BUILD_COMMIT);
 const BUILD_COMMIT = process.env.BUILD_COMMIT || 'dist';
 
 module.exports = {
