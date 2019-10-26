@@ -1,5 +1,10 @@
 const { resolve } = require('path');
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+console.log('process.env.BUILD_COMMIT');
+console.log(process.env.BUILD_COMMIT);
+const BUILD_COMMIT = process.env.BUILD_COMMIT || 'dist';
 
 module.exports = {
     entry: resolve(__dirname, 'src', 'workers'),
@@ -33,6 +38,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new MiniCssExtractPlugin({ filename: '[name].css' })
+        new MiniCssExtractPlugin({ filename: '[name].css' }),
+        new webpack.DefinePlugin({ BUILD_COMMIT })
     ]
 }

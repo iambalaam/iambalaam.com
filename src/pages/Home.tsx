@@ -4,5 +4,5 @@ import * as styles from './Home.module.scss';
 export default () =>
     <>
         <h1>iambalaam.com</h1>
-        <p>Hello <span className={styles.red}>styles</span>!</p>
+        <p>Latest build artifact: {BUILD_COMMIT}</p>
     </>
