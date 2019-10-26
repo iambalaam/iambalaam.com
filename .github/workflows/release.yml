@@ -37,7 +37,7 @@ jobs:
           git add dist
           git commit -m "Build artifacts"
           git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" dist
-          git checkout master
+          git checkout ${{ github.sha }}
       - name: publish
         run: |
           echo "Using build commit $(git rev-parse dist)"
