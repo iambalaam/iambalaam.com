@@ -1,4 +1,4 @@
-html{font-family:Arial, Helvetica, sans-serif}
+html{font-family:Arial, Helvetica, sans-serif;height:100%}body{height:100%;display:flex;justify-content:center;align-items:center}
 
-.red{color:red}
+#screen{position:relative;padding:0 10px;height:108px;width:192px;background-color:#272c35;border-radius:10px;overflow:hidden}#code{animation:programming 4s linear infinite}#screen .line{height:18px;margin-bottom:2px}#screen span{display:inline-block;height:18px;margin:2px;border-radius:8px}#screen span.tab{width:15px}#screen span.xs{width:30px}#screen span.s{width:60px}#screen span.m{width:90px}#screen span.l{width:120px}#screen span.xl{width:150px}.purple{background-color:#c678dc}.blue{background-color:#60aeee}.yellow{background-color:#e4c079}.red{background-color:#d9646a}@keyframes programming{from{transform:translatey(28px)}to{transform:translatey(-232px)}}
 
