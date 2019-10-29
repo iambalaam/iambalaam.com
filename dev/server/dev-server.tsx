@@ -6,10 +6,11 @@ import { resolve } from 'path';
 import htmlDocument from '../../src/util/html';
 import App from '../../src/App';
 
+const ROOT_DIR = resolve(__dirname, '../..');
 const PORT = process.env.port || 3000;
 const server = express();
 
-server.get('/static/dist', express.static(resolve(__dirname, '../../', 'dist')));
+server.use('/static/dist/dist', express.static(resolve(ROOT_DIR, 'dist')));
 server.get('*', (request, response) => {
     const context: StaticContext = {};
     try {
