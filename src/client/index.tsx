@@ -9,4 +9,3 @@ hydrate(
     </BrowserRouter>,
     document.getElementById('root')
 );
-console.log('Hydrated');
