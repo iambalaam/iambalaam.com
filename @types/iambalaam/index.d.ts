@@ -7,4 +7,9 @@ declare module '*.scss' {
     export { };
 }
 
+declare module '*.xhtml.js' {
+    const content: { html: string }
+    export = content;
+}
+
 declare const BUILD_COMMIT: string;

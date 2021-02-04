@@ -1,0 +1,17 @@
+#ico-frame {
+    width: 0;
+    height: 0;
+    margin: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+    0% {transform: rotateX(-20deg) rotateY(0);}
+    100% {transform: rotateX(-20deg) rotateY(360deg);}
+}
+
+:global(.triangle.icosphere) {
+    border-bottom-color: rgba(255,0,0,0.2);
+}

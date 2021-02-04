@@ -4,3 +4,7 @@ node_modules/
 dist/
 # Wrangler preview builds to worker/
 worker/
+
+# Artifacts created from 3d models
+models/*.xhtml.js
+models/required.module.scss
