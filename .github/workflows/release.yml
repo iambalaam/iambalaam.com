@@ -34,7 +34,7 @@ jobs:
           rm -rf tmp
           mv dist tmp
           echo "Checking out dist branch"
-          git checkout dist
+          git checkout origin/dist
           echo "Replacing build artifacts"
           rm -rf dist
           mv tmp dist
