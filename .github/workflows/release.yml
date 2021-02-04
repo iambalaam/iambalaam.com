@@ -7,6 +7,7 @@ on:
   push:
     branches:
       - master
+      - debug-github-actions
 
 jobs:
   release:
@@ -35,7 +36,7 @@ jobs:
           mv tmp dist
           git add dist
           git commit -m "Build artifacts"
-          git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" dist
+          git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
           git checkout ${{ github.sha }}
       - name: publish
         run: |
