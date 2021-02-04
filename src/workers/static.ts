@@ -45,7 +45,8 @@ const handleRequest = async (event: FetchEvent) => {
             const content = await response.body;
             return new Response(content, {
                 headers: {
-                    'content-type': contentType(pathname)
+                    'Content-Tpe': contentType(pathname),
+                    'Cache-Control': 'max-age=31536000'
                 }
             })
         }
