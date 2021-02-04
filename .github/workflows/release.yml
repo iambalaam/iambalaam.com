@@ -30,23 +30,26 @@ jobs:
           echo "Configuring github user"
           git config user.name "BUILD"
           git config user.email "BUILD@GITHUB_ACTIONS"
+
           echo "Creating ./tmp folder"
           rm -rf tmp
           mv dist tmp
-          echo "Listing all remote branches"
-          git fetch
-          git branch -r
 
           echo "Checking out dist branch"
+          git fetch --all
           git checkout --track origin/dist
+
           echo "Replacing build artifacts"
           rm -rf dist
           mv tmp dist
           git add dist
+
           echo "Comitting build artifacts"
-          git commit -m "Build artifacts"
+          git commit --allow-empty -m "Build artifacts"
+
           echo "Pushing build artifacts"
           git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+
           echo "Resetting workspace to publish"
           git checkout ${{ github.sha }}
       - name: publish
