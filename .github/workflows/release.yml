@@ -33,8 +33,12 @@ jobs:
           echo "Creating ./tmp folder"
           rm -rf tmp
           mv dist tmp
+          echo "Listing all remote branches"
+          git fetch
+          git branch -r
+
           echo "Checking out dist branch"
-          git checkout origin/dist
+          git checkout --track origin/dist
           echo "Replacing build artifacts"
           rm -rf dist
           mv tmp dist
