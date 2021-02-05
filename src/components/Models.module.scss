@@ -7,14 +7,31 @@
     animation: spin 20s linear infinite;
 }
 
-.webFrame {
-    width: 0;
-    height: 0;
-    margin: 200px;
+.webFrame, .rewiredFrame {
+    perspective: 500px;
+    height: 300px;
+    width: 400px;
+    background-color: white;
+    box-shadow: 0 0 20px lightgray;
     position: relative;
+}
+
+.spin {
+    position: absolute;
+    left: 50%;
+    top: 50%;
     transform-style: preserve-3d;
     animation: spin 20s linear infinite;
 }
+
+// Rewired Bot Colors
+:global(.triangle.rewired-antenna) { border-bottom-color: grey; }
+:global(.triangle.rewired-body) { border-bottom-color: lightgrey; }
+:global(.triangle.rewired-tops) { border-bottom-color: rgb(17, 135, 231); }
+:global(.triangle.rewired-sides) { border-bottom-color: rgb(10, 96, 167); }
+:global(.triangle.rewired-bottoms) { border-bottom-color: rgb(6, 70, 122); }
+:global(.triangle.rewired-eye) { border-bottom-color: grey; }
+:global(.triangle.rewired-lens) { border-bottom-color: dimgrey; }
 
 @keyframes spin {
     0% {transform: rotateX(-20deg) rotateY(0);}

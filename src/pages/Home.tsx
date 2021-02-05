@@ -1,11 +1,15 @@
 import * as React from 'react';
-import { WebsiteModel } from '../components/Models';
+import Project from '../components/Project';
+import { RewiredBot } from '../components/Models';
 
 export default function Home() {
     return (
         <>
-            <h1>in development...</h1>
-            <WebsiteModel />
+            <Project
+                title="iambalaam.com"
+                techUsed={['Cloudflare', 'GitHub Actions']}
+                frame={<RewiredBot />}
+            />
         </>
     )
 };
