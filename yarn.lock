@@ -1158,10 +1158,10 @@ cyclist@~0.2.2:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-0.2.2.tgz#1b33792e11e914a2fd6d6ed6447464444e5fa640"
   integrity sha1-GzN5LhHpFKL9bW7WRHRkRE5fpkA=
 
-dae2css@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/dae2css/-/dae2css-1.1.0.tgz#ccbd4f1e194f3ae699ac67c1bb17b65fab5da7bf"
-  integrity sha512-2U60fQCctoTBNLm16Xf6zGww9pRzxgeSiC2Xt9tiTdO0+VdUWimlm3jdmz3tTpx9nnZ9vXfGLv2W+3pEsMd8YQ==
+dae2css@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/dae2css/-/dae2css-1.1.2.tgz#8108ec12f5e6c6f47375dcc54dc0c1049a49ccb4"
+  integrity sha512-qZCi9T0wcBJhVbE7DRjXPjIFl/m6xrKMnQ/I0c4ssDKvJDQlwgOG+/Rwx2H6CWhHmucCYF3T6bMqYFEX3zKLIw==
   dependencies:
     xml2js "^0.4.23"
 
