@@ -1,11 +1,11 @@
 import * as React from 'react';
-import Icosphere from '../components/Icosphere';
+import { WebsiteModel } from '../components/Models';
 
 export default function Home() {
     return (
         <>
             <h1>in development...</h1>
-            <Icosphere />
+            <WebsiteModel />
         </>
     )
 };
