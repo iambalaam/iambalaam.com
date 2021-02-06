@@ -12,7 +12,7 @@
     animation: spin 20s linear infinite;
 }
 
-.webFrame, .rewiredFrame {
+.webFrame, .rewiredFrame, .pencilFrame {
     perspective: 500px;
     height: 300px;
     width: 400px;
@@ -29,6 +29,14 @@
     animation: spin 20s linear infinite;
 }
 
+.tiltAndSpin {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-style: preserve-3d;
+    animation: tiltAndSpin 5s ease-out infinite;
+}
+
 // Rewired Bot Colors
 :global(.triangle.rewired-antenna) { border-bottom-color: grey; }
 :global(.triangle.rewired-body) { border-bottom-color: lightgrey; }
@@ -38,15 +46,33 @@
 :global(.triangle.rewired-eye) { border-bottom-color: grey; }
 :global(.triangle.rewired-lens) { border-bottom-color: dimgrey; }
 
+// Pencil Colors
+:global(.triangle.pencil-lead) {border-bottom-color: rgb(85, 85, 85);}
+:global(.triangle.pencil-wood) {border-bottom-color: rgb(231, 179, 129);}
+:global(.triangle.pencil-black) {border-bottom-color: rgb(54, 54, 54);}
+:global(.triangle.pencil-yellow) {border-bottom-color: rgb(223, 223, 90);}
+:global(.triangle.pencil-metal) {border-bottom-color: lightgray;}
+:global(.triangle.pencil-rubber) {border-bottom-color: rgb(228, 116, 116);}
+
+
+:global(.triangle.icosphere) {
+    border-bottom-color: rgba(255,0,0,0.2);
+}
+
+:global(.triangle.website) {
+    backface-visibility: visible;
+    border-bottom-color: rgba(4, 150, 218, 0.4);
+}
+
 @keyframes spin {
     0% {transform: rotateX(-20deg) rotateY(0);}
     100% {transform: rotateX(-20deg) rotateY(360deg);}
 }
 
-:global(.triangle.icosphere) {
-    border-bottom-color: rgba(255,0,0,0.2);
-}
-:global(.triangle.website) {
-    backface-visibility: visible;
-    border-bottom-color: rgba(4, 150, 218, 0.4);
+@keyframes tiltAndSpin {
+    0% {transform: rotateZ(35deg) rotateY(0) translateY(0px);}
+    25%{transform: rotateZ(30deg) rotateY(30deg) translateY(-10px);}
+    50%{transform: rotateZ(40deg) rotateY(60deg)  translateY(0px);}
+    75%{transform: rotateZ(30deg) rotateY(90deg) translateY(-10px);}
+    100% {transform: rotateZ(35deg) rotateY(120deg)  translateY(0px);}
 }
