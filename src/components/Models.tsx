@@ -21,6 +21,8 @@ import { html as pencilYellow } from '../../models/pencil-yellow.xhtml.js';
 import { html as pencilMetal } from '../../models/pencil-metal.xhtml.js';
 import { html as pencilRubber } from '../../models/pencil-rubber.xhtml.js';
 
+import { html as tick } from '../../models/tick.xhtml.js';
+
 
 export function WebsiteModel() {
     return (
@@ -42,6 +44,14 @@ export function Pencil() {
     return (
         <div className={s.pencilFrame}>
             <div className={s.tiltAndSpin} dangerouslySetInnerHTML={{ __html: pencilLead + pencilWood + pencilBlack + pencilYellow + pencilMetal + pencilRubber }}></div>
+        </div>
+    );
+}
+
+export function Tick() {
+    return (
+        <div className={s.tickFrame}>
+            <div className={s.bob} dangerouslySetInnerHTML={{ __html: tick }}></div>
         </div>
     );
 }

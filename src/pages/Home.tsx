@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Project from '../components/Project';
-import { Pencil, RewiredBot } from '../components/Models';
+import { Pencil, RewiredBot, Tick } from '../components/Models';
 
 export default function Home() {
     return (
@@ -15,6 +15,11 @@ export default function Home() {
                 title="photoshop-js"
                 techUsed={['vanillaJS']}
                 frame={<Pencil />}
+            />
+            <Project
+                title="Amazon"
+                techUsed={['lots']}
+                frame={<Tick />}
             />
         </>
     )

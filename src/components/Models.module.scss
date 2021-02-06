@@ -12,7 +12,7 @@
     animation: spin 20s linear infinite;
 }
 
-.webFrame, .rewiredFrame, .pencilFrame {
+.webFrame, .rewiredFrame, .pencilFrame, .tickFrame {
     perspective: 500px;
     height: 300px;
     width: 400px;
@@ -37,6 +37,14 @@
     animation: tiltAndSpin 5s ease-out infinite;
 }
 
+.bob {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-style: preserve-3d;
+    animation: bob 5s linear infinite;
+}
+
 // Rewired Bot Colors
 :global(.triangle.rewired-antenna) { border-bottom-color: grey; }
 :global(.triangle.rewired-body) { border-bottom-color: lightgrey; }
@@ -54,6 +62,8 @@
 :global(.triangle.pencil-metal) {border-bottom-color: lightgray;}
 :global(.triangle.pencil-rubber) {border-bottom-color: rgb(228, 116, 116);}
 
+// Tick Colours
+:global(.triangle.tick) {border-bottom-color: rgb(235, 174, 43);}
 
 :global(.triangle.icosphere) {
     border-bottom-color: rgba(255,0,0,0.2);
@@ -75,4 +85,9 @@
     50%{transform: rotateZ(40deg) rotateY(60deg)  translateY(0px);}
     75%{transform: rotateZ(30deg) rotateY(90deg) translateY(-10px);}
     100% {transform: rotateZ(35deg) rotateY(120deg)  translateY(0px);}
+}
+
+@keyframes bob {
+    0% {transform: rotateY(0deg) rotateX(5deg)  rotateY(0deg);}
+    100% {transform: rotateY(-360deg) rotateX(5deg)  rotateY(360deg);}
 }
