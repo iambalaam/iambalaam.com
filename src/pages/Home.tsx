@@ -3,6 +3,7 @@ import Project from '../components/Project';
 import { Pencil, RewiredBot, Tick } from '../components/Models';
 
 import Cat from '../../static/photoshop-js-cat.gif';
+import Lightsaber from '../../static/lightsaber.gif';
 
 export default function Home() {
     return (
@@ -17,7 +18,7 @@ export default function Home() {
                 title="photoshop-js"
                 techUsed={['vanillaJS']}
                 frame={<Pencil />}
-                images={[Cat, Cat]}
+                images={[Cat, Lightsaber]}
             />
             <Project
                 title="Amazon"
