@@ -2,6 +2,8 @@ const { resolve } = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const BUILD_COMMIT = process.env.BUILD_COMMIT || 'dist';
+
 module.exports = {
     entry: resolve(__dirname, 'src', 'client'),
     output: {
@@ -30,6 +32,14 @@ module.exports = {
                         loader: 'sass-loader'
                     }
                 ]
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    publicPath: `/static/${BUILD_COMMIT}/dist/`
+                }
             }
         ]
     },

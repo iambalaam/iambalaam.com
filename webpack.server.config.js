@@ -32,6 +32,14 @@ module.exports = {
                         loader: 'sass-loader'
                     }
                 ]
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    publicPath: `/static/${BUILD_COMMIT}/dist/`
+                }
             }
         ]
     },
