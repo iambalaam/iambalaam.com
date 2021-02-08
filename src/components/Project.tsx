@@ -3,7 +3,8 @@ import * as s from './Project.module.scss';
 import { Link } from '../util/types';
 
 export interface ProjectProps {
-    title: string,
+    title: Link,
+    tagline?: string;
     techUsed: Link[],
     frame: JSX.Element,
     images?: string[]
@@ -12,7 +13,8 @@ export interface ProjectProps {
 export default function Project(p: ProjectProps) {
     return (
         <div>
-            <h2>{p.title}</h2>
+            <h2><a href={p.title.href}>{p.title.text}</a></h2>
+            {p.tagline && <h3><a href={p.title.href}>{p.tagline}</a></h3>}
             {p.techUsed.map((link) => <a className={s.techUsed} key={link.href} href={link.href}>{link.text}</a>)}
             <hr />
             <div className={s.container}>
