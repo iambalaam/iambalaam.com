@@ -32,6 +32,15 @@ export default function Home() {
                 techUsed={[unity, rewiredItch]}
                 frame={<RewiredBot />}
                 images={[RewiredLogo, RewiredFallOff]}
+                description={<>
+                    <p>
+                        I teamed up with a 3D artist that did an amazing job on the modelling and texturing.
+                        We designed a game where you interfere with your opponents input, leaving them <em>Out Of Control</em>.
+                    </p>
+                    <p>
+                        <a href="https://www.youtube.com/c/DotSlashFrag">DotSlashFrag</a> found our game on Itch and <a href="https://www.youtube.com/watch?v=Xq9xE4kE8xQ">uploaded a let's play</a>.
+                    </p>
+                </>}
             />
             <Project
                 title={{ text: 'Jousting', href: joustingItch.href }}
