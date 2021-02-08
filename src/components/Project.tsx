@@ -25,7 +25,7 @@ export default function Project(p: ProjectProps) {
                     {p.frame}
                 </div>
                 {p.images && p.images.map((imgSrc, i) => <div className={`image${i}`} key={imgSrc}><img src={imgSrc} /></div>)}
-                <div className={s.text}>{p.description || <p>{lorem}</p>}</div>
+                <div className={s.description}>{p.description || <p>{lorem}</p>}</div>
             </div>
         </div>
     );

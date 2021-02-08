@@ -70,12 +70,34 @@ export default function Home() {
                 techUsed={[vanillaJS]}
                 frame={< Pencil />}
                 images={[Cat, Lightsaber]}
+                description={<>
+                    <p>
+                        I set out to make a drawing application in the browser in the least performant way possible.
+                        Instead of using a canavs to draw pixels, I made vector art by positioning DOM elements.
+                    </p>
+                    <p>
+                        {/* This is lacking enthusiasm 😅 */}
+                        The prototype performed much better than expected, and challenged a lot of assumptions I had about the browser.
+                    </p>
+                </>}
             />
             <Project
                 title={{ text: 'iambalaam.com', href: 'https://iambalaam.com/' }}
                 tagline="Front End"
                 techUsed={[dae2css, reactJS]}
                 frame={< WebsiteModel />}
+                description={<>
+                    <p>
+                        {/* Why did I make this? */}
+                        Following my 2D vector art with <a href="#photoshop-js">photoshop-js</a>, I wanted to test how well the browser would render 3D models using CSS and DOM elements.
+                    </p>
+                    <p>
+                        I wrote and published my first npm module <a href={dae2css.href}><code>dae2css</code></a> to encapsulate all the fun linear algebra.
+                    </p>
+                    <p>
+                        There are some rendering bugs (especially on chrome) that I won't be able to fix, but I think it's still an entertaining addition to the site.
+                    </p>
+                </>}
             />
             <Project
                 title={{ text: 'iambalaam.com', href: 'https://iambalaam.com/' }}
