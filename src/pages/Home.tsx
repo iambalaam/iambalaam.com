@@ -9,6 +9,10 @@ import Jousting from '../../static/jousting.gif';
 
 import Cat from '../../static/photoshop-js-cat.gif';
 import Lightsaber from '../../static/lightsaber.gif';
+
+import Cloudflare from '../../static/cloudflare.jpg';
+import GithubActions from '../../static/github-actions.jpg';
+
 import { Link } from '../util/types';
 
 // Links
@@ -21,6 +25,8 @@ const socketIO: Link = { text: 'Socket.IO', href: 'https://socket.io/' };
 const vanillaJS: Link = { text: 'Vanilla JS', href: 'http://vanilla-js.com/' };
 const dae2css: Link = { text: 'dae2css', href: 'https://www.npmjs.com/package/dae2css/' };
 const reactJS: Link = { text: 'React', href: 'https://reactjs.org/' };
+const cloudflareWorkers: Link = { text: 'Cloudflare Workers', href: 'https://workers.cloudflare.com/' }
+const githubActions: Link = { text: 'Github Actions', href: 'https://github.com/features/actions' };
 
 export default function Home() {
     return (
@@ -102,8 +108,20 @@ export default function Home() {
             <Project
                 title={{ text: 'iambalaam.com', href: 'https://iambalaam.com/' }}
                 tagline="Back End"
-                techUsed={[]}
+                techUsed={[cloudflareWorkers, githubActions]}
                 frame={< WebsiteModel />}
+                images={[Cloudflare, GithubActions]}
+                description={<>
+                    <p>
+                        I wanted a site with a few moving parts as possible, so I adopted a serverless architecture.
+                    </p>
+                    <p>
+                        Github Actions handle testing, building and deploying my code.  It also <a href="https://github.com/iambalaam/iambalaam.com/commits/dist">commits my build artifacts</a> to serve as free file hosting.
+                    </p>
+                    <p>
+                        Cloudflare Workers serverside render the website to improve page performance, and also act as a CDN for static assets.
+                    </p>
+                </>}
             />
             <Project
                 title={{ text: 'Amazon', href: '#' }}
