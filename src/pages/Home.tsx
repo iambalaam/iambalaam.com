@@ -28,17 +28,33 @@ export default function Home() {
             <h1>Projects</h1>
             <Project
                 title={{ text: 'Rewired', href: rewiredItch.href }}
-                tagline="GMTK GameJam 2020"
+                tagline={'GMTK GameJam 2020: "Out Of Control"'}
                 techUsed={[unity, rewiredItch]}
                 frame={<RewiredBot />}
                 images={[RewiredLogo, RewiredFallOff]}
             />
             <Project
                 title={{ text: 'Jousting', href: joustingItch.href }}
-                tagline="GMTK GameJam 2019"
+                tagline={'GMTK GameJam 2019: "Only One"'}
                 techUsed={[p5js, socketIO, heroku, joustingItch]}
                 frame={<WebsiteModel />}
                 images={[Jousting]}
+                description={<>
+                    <p>
+                        I wanted to make a game with <em>Only One</em> input, so it could be played by anyone with a mouse or touch device.
+                    </p>
+                    <p>
+                        I decided to create an online multiplayer game as before this I had only made single player games.
+                        Being my first game jam, I stuck to what I knew and designed it to work in the browser.
+                        I learnt to use websockets between players, wrote a simple physics engine and used <a href={p5js.href}>{p5js.text}</a> to render the canvas.
+                    </p>
+                    <p>
+                        I designed the game to reward an aggressive playstyle, so the players sword gets longer the faster they are travelling, encouraging aerial combat.
+                    </p>
+                    <p>
+                        I took inspiraton from <a href="https://www.youtube.com/watch?v=sQwBuaik9lA">Super Pole Riders</a> for the pole vault mechanics.
+                    </p>
+                </>}
             />
             <Project
                 title={{ text: 'photoshop-js', href: 'https://iambalaam.github.io/JSToys/photoshop-js/' }}
