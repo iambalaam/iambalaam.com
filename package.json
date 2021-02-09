@@ -23,7 +23,7 @@
         "@types/node": "^12.7.1",
         "@types/react": "^16.9.1",
         "@types/react-dom": "^16.8.5",
-        "@types/react-router-dom": "^4.3.5",
+        "@types/react-router-dom": "^5.1.0",
         "css-loader": "^3.2.0",
         "dae2css": "^1.1.2",
         "express": "^4.17.1",
