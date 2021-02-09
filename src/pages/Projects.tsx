@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Project from '../components/Project';
-import { Pencil, RewiredBot, Tick, WebsiteModel } from '../components/Models';
+import { Pencil, RewiredBot, WebsiteModel } from '../components/Models';
 
 import RewiredLogo from '../../static/rewired-logo.jpg';
 import RewiredFallOff from '../../static/rewired-fall-off.gif';
@@ -28,7 +28,7 @@ const reactJS: Link = { text: 'React', href: 'https://reactjs.org/' };
 const cloudflareWorkers: Link = { text: 'Cloudflare Workers', href: 'https://workers.cloudflare.com/' }
 const githubActions: Link = { text: 'Github Actions', href: 'https://github.com/features/actions' };
 
-export default function Home() {
+export default function Projects() {
     return (
         <>
             <h1>Projects</h1>
@@ -122,12 +122,6 @@ export default function Home() {
                         Cloudflare Workers serverside render the website to improve page performance, and also act as a CDN for static assets.
                     </p>
                 </>}
-            />
-            <Project
-                title={{ text: 'Amazon', href: '#' }}
-                tagline="Prime Video"
-                techUsed={[{ text: 'lots', href: '#' }]}
-                frame={<Tick />}
             />
         </>
     )

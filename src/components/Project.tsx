@@ -15,7 +15,7 @@ const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
 
 export default function Project(p: ProjectProps) {
     return (
-        <div>
+        <div className={s.project}>
             <h2><a href={p.title.href}>{p.title.text}</a></h2>
             {p.tagline && <h3><a href={p.title.href}>{p.tagline}</a></h3>}
             {p.techUsed.map((link) => <a className={s.techUsed} key={link.href} href={link.href}>{link.text}</a>)}
