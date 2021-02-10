@@ -7,11 +7,14 @@ export default function Header() {
     const path: string = useLocation().pathname;
     return (<>
         <header className={s.header}>
-            <span className={s.me}>Guy Balaam</span>
-            <span className={s.typeof}>: </span>
-            <span className={s.type}>Software Developer</span>
-            <span className={s.semicolon}>;</span>
-            <span className={s.cursor}>|</span>
+            <span className={s.static}>
+                <span className={s.me}>Guy Balaam</span>
+                <span className={s.typeof}>:&nbsp;</span>
+            </span>
+            <span className={s.typing}>
+                <span className={s.type}>Software Developer</span>
+                <span className={s.semicolon}>;</span>
+            </span>
         </header>
         <nav>{
             ['About', 'Projects', 'Experience', 'Contact'].map((Route) => {

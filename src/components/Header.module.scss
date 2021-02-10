@@ -1,5 +1,7 @@
 @import '../util/_colors.module.scss';
 
+$cursor-width: 4;
+
 .header {
     height: 60px;
     font-size: 40px;
@@ -11,12 +13,32 @@
     .typeof {color: $off-white; }
     .type { color: $red; }
     .semicolon {color: $off-white; }
-    .cursor { color: $blue; animation: blink 1.5s step-end  infinite }
+    
+    .static {
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    .typing {
+        overflow: hidden;
+        white-space: nowrap;
+        display: inline-block;
+        border-right: $cursor-width + px solid;
+        // 19 characters in 'Software Developer;'
+        animation: 
+            type 3s steps(19, end),
+            blink 1s step-end infinite;
+    }
+}
+
+@keyframes type {
+    0%, 50% { width: $cursor-width + px; }
+    to { width: #{(19 * 24 + $cursor-width)}px; }
 }
 
 @keyframes blink {
-    0% { visibility: hidden; }
-    50% { visibility: visible; }
+    from, to { border-right-color: transparent; }
+    50% { border-right-color: $blue; }
 }
 
 nav {
