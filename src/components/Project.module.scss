@@ -1,3 +1,5 @@
+@import '../util/colors.module.scss';
+
 .project {
     // Largest viewport
     h2 { font-size: calc(min(15vh, 10vw)); margin: 0; }
@@ -8,11 +10,12 @@
     margin-right: 20px;
     padding: 3px;
     border-radius: 6px;
-    background-color: indianred;
+    background-color: $red;
     color: white;
 }
 
 .container {
+    color: $off-white;
     display: grid;
     width: 1000px;
     

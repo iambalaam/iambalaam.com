@@ -1,16 +1,39 @@
+@import '../util/_colors.module.scss';
+
 .header {
     height: 60px;
     font-size: 40px;
     padding: 5px;
-    background-color: dimgrey;
-    color: white;
+    background-color: $bg-dark;
+    color: $off-white;
+
+    .me { color: $yellow; }
+    .typeof {color: $off-white;}
+    .type { color: $red; }
+    .cursor {color: $blue; animation: blink 1.5s step-end  infinite}
+}
+
+@keyframes blink {
+    0% { visibility: hidden; }
+    50% { visibility: visible; }
 }
 
 nav {
-    color: black;
+    color: $off-white;
+    background-color: $bg-dark;
+    border-bottom: 1px solid black;
 
-    * {
-        margin-left: 10px;
-        padding: 10px;
+    a, span {
+        display: inline-block;
+        padding: 4px 10px;
+        border-right: 1px solid black;
+    }
+    
+    .selected {
+        background-color: $bg-light;
+        border: 1px solid black;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        box-shadow: 0 1px 0 0 $bg-light;
     }
 }

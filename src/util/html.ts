@@ -8,14 +8,17 @@ export interface PageArgs {
 const head = ({ title, desc, head }: PageArgs) => `\
 <head>
     <meta charset="utf-8">
-    <title>${encodeURIComponent(title)}</title>
+    <title>${title}</title>
     <meta name="description" content="${desc}">
     <!-- link rel="shortcut icon" href="favicon.ico" type="image/x-icon" -->
     <!-- meta property="og:image" content="favicon.ico" -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1 shrink-to-fit=no">
+
+    <!-- Socials -->
+    <meta name="theme-color" content="#000000">
     <meta property="og:title" content="${title}">
     <meta property="og:description" content="${desc}">
     <meta name="twitter:title" content="${title}">
-    <meta name="viewport" content="width=device-width, initial-scale=1", maximum-scale=1, minimum-scale=1">
     <script>window.BUILD_COMMIT='${BUILD_COMMIT}';</script>
 
     <!-- Font faces -->

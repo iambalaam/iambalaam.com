@@ -6,13 +6,18 @@ import * as s from './Header.module.scss';
 export default function Header() {
     const path: string = useLocation().pathname;
     return (<>
-        <header className={s.header}> Guy Balaam - Software Developer </header>
+        <header className={s.header}>
+            <span className={s.me}>Guy Balaam</span>
+            <span className={s.typeof}>: </span>
+            <span className={s.type}>Software Developer;</span>
+            <span className={s.cursor}>|</span>
+        </header>
         <nav>{
             ['About', 'Projects', 'Experience', 'Contact'].map((Route) => {
                 const route = Route.toLowerCase();
                 const target = '/' + route;
                 return (path === target)
-                    ? <span>{Route}</span>
+                    ? <span className={s.selected}>{Route}</span>
                     : <NavLink to={target}>{Route}</NavLink>
             })
         }</nav>

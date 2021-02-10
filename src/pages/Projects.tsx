@@ -31,7 +31,6 @@ const githubActions: Link = { text: 'Github Actions', href: 'https://github.com/
 export default function Projects() {
     return (
         <>
-            <h1>Projects</h1>
             <Project
                 title={{ text: 'Rewired', href: rewiredItch.href }}
                 tagline={'GMTK GameJam 2020: "Out Of Control"'}
