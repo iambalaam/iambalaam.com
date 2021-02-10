@@ -8,9 +8,10 @@
     color: $off-white;
 
     .me { color: $yellow; }
-    .typeof {color: $off-white;}
+    .typeof {color: $off-white; }
     .type { color: $red; }
-    .cursor {color: $blue; animation: blink 1.5s step-end  infinite}
+    .semicolon {color: $off-white; }
+    .cursor { color: $blue; animation: blink 1.5s step-end  infinite }
 }
 
 @keyframes blink {

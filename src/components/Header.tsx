@@ -9,7 +9,8 @@ export default function Header() {
         <header className={s.header}>
             <span className={s.me}>Guy Balaam</span>
             <span className={s.typeof}>: </span>
-            <span className={s.type}>Software Developer;</span>
+            <span className={s.type}>Software Developer</span>
+            <span className={s.semicolon}>;</span>
             <span className={s.cursor}>|</span>
         </header>
         <nav>{
