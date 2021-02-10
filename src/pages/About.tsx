@@ -1,7 +1,14 @@
 import * as React from 'react';
+import { Skateboard } from '../components/Models';
+
+import Project from '../components/Project';
 
 export default function About() {
     return (<>
-        <h1>About</h1>
+        <Project
+            title={{ text: 'Skateboarding', href: '#' }}
+            techUsed={[]}
+            frame={<Skateboard />}
+        />
     </>)
 }

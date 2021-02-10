@@ -14,12 +14,10 @@
     animation: spin 20s linear infinite;
 }
 
-.webFrame, .rewiredFrame, .pencilFrame, .tickFrame {
+.webFrame, .rewiredFrame, .pencilFrame, .tickFrame, .skateboardFrame {
     perspective: 500px;
     height: 300px;
     width: 400px;
-    background-color: white;
-    box-shadow: 0 0 20px $bg-dark;
     position: relative;
 }
 
@@ -37,6 +35,14 @@
     top: 50%;
     transform-style: preserve-3d;
     animation: tiltAndSpin 5s ease-out infinite;
+}
+
+.kickflip {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-style: preserve-3d;
+    animation: kickflip 5s linear infinite;
 }
 
 .bob {
@@ -64,6 +70,13 @@
 :global(.triangle.pencil-metal) {border-bottom-color: lightgray;}
 :global(.triangle.pencil-rubber) {border-bottom-color: rgb(228, 116, 116);}
 
+// Skateboard Colors
+:global(.triangle.skateboard-griptape) {border-bottom-color: rgb(58, 58, 58);}
+:global(.triangle.skateboard-wood) {border-bottom-color: rgb(231, 179, 129);}
+:global(.triangle.skateboard-graphic) {border-bottom-color: rgb(118, 201, 41);}
+:global(.triangle.skateboard-trucks) {border-bottom-color: rgb(140, 155, 160);}
+:global(.triangle.skateboard-wheels) {border-bottom-color: rgb(243, 243, 215);}
+
 // Tick Colours
 :global(.triangle.tick) {border-bottom-color: rgb(235, 174, 43);}
 
@@ -87,6 +100,20 @@
     50%{transform: rotateZ(40deg) rotateY(60deg)  translateY(0px);}
     75%{transform: rotateZ(30deg) rotateY(90deg) translateY(-10px);}
     100% {transform: rotateZ(35deg) rotateY(120deg)  translateY(0px);}
+}
+
+@keyframes kickflip {
+    0%, 13% { transform: translateX(0px) translateY(100px) rotateZ(0) rotateX(0) }
+    // Pop
+    15% { transform: translateX(-10px) translateY(50px) rotateZ(-55deg) rotateX(5deg) }
+    20% { transform: translateX(-20px) translateY(-20px) rotateZ(-75deg) rotateX(15deg) }
+    // Kick
+    40% { transform: translateX(0px) translateY(-70px) rotateZ(-20deg) rotateX(180deg) }
+    60% { transform: translateX(40px) translateY(-50px) rotateZ(5deg) rotateX(360deg) }
+    // Catch
+    65% { transform: translateY(20px) rotateZ(5deg) rotateX(360deg) }
+    // Fall
+    70%, 100% { transform: translateY(0px) translateY(100px) rotateZ(0deg) rotateX(360deg) }
 }
 
 @keyframes bob {
