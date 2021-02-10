@@ -28,13 +28,17 @@ nav {
         display: inline-block;
         padding: 4px 10px;
         border-right: 1px solid black;
+
+        &:hover, &:focus {
+            background-color: $bg-lighter;
+        }
     }
     
     .selected {
         background-color: $bg-light;
         border: 1px solid black;
-        border-left-color: transparent;
-        border-bottom-color: transparent;
+        border-left-width: 0;
+        border-bottom-width: 0;
         box-shadow: 0 1px 0 0 $bg-light;
     }
 }
