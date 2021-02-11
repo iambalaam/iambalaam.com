@@ -4,6 +4,7 @@ $cursor-width: 4;
 
 .header {
     position: sticky;
+    z-index: 100;
     top: 0;
     font-size: 40px;
     background-color: $bg-dark;
