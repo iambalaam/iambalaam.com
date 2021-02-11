@@ -6,6 +6,7 @@
 }
 
 .icoFrame {
+    overflow: hidden;
     width: 0;
     height: 0;
     margin: 200px;
@@ -15,6 +16,7 @@
 }
 
 .webFrame, .rewiredFrame, .pencilFrame, .tickFrame, .skateboardFrame {
+    overflow: hidden;
     perspective: 500px;
     height: 300px;
     width: 400px;

@@ -9,13 +9,10 @@ import Experience from './pages/Experience';
 import Contact from './pages/Contact';
 import NotFound from './pages/404';
 
-import GithubCorner from './components/GithubCorner';
-
 const App = () =>
     <div>
         <Header />
         <main>
-            <GithubCorner />
             <Switch>
                 <Redirect exact path="/" to="/about" />
                 <Route exact path='/about' component={About} />

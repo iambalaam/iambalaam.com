@@ -16,17 +16,21 @@ const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
 export default function Project(p: ProjectProps) {
     return (
         <div className={s.project}>
-            <h2><a href={p.title.href}>{p.title.text}</a></h2>
-            {p.tagline && <h3><a href={p.title.href}>{p.tagline}</a></h3>}
-            {p.techUsed.map((link) => <a className={s.techUsed} key={link.href} href={link.href}>{link.text}</a>)}
+            <a href={p.title.href}>
+                <h2 className={s.title}>{p.title.text}</h2>
+                {p.tagline && <h3 className={s.tagline}>{p.tagline}</h3>}
+            </a>
             <hr />
+            <div className={s.techList}>
+                {p.techUsed.map((link) => <a className={s.techUsed} key={link.href} href={link.href}>{link.text}</a>)}
+            </div>
             <div className={s.container}>
+                {p.images && p.images.map((imgSrc, i) => <div className={`image${i}`} key={imgSrc}><img src={imgSrc} /></div>)}
+                <div className={s.description}>{p.description || <p>{lorem}</p>}</div>
                 <div className={s.frame3d}>
                     {p.frame}
                 </div>
-                {p.images && p.images.map((imgSrc, i) => <div className={`image${i}`} key={imgSrc}><img src={imgSrc} /></div>)}
-                <div className={s.description}>{p.description || <p>{lorem}</p>}</div>
             </div>
-        </div>
+        </div >
     );
 }

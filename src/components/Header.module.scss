@@ -3,11 +3,16 @@
 $cursor-width: 4;
 
 .header {
-    height: 60px;
+    position: sticky;
+    top: 0;
     font-size: 40px;
-    padding: 5px;
     background-color: $bg-dark;
     color: $off-white;
+
+    .top { 
+       height: 60px;
+       padding: 5px;
+    }
 
     .me { color: $yellow; }
     .typeof {color: $off-white; }
@@ -42,9 +47,14 @@ $cursor-width: 4;
 }
 
 nav {
+    font-size: large;
     color: $off-white;
-    background-color: $bg-dark;
     border-bottom: 1px solid black;
+    padding-left: 4vw;
+
+    :first-child {
+        border-left: 1px solid black;
+    }
 
     a, span {
         display: inline-block;
@@ -58,9 +68,7 @@ nav {
     
     .selected {
         background-color: $bg-light;
-        border: 1px solid black;
-        border-left-width: 0;
-        border-bottom-width: 0;
+        border-top: 1px solid black;
         box-shadow: 0 1px 0 0 $bg-light;
     }
 }
