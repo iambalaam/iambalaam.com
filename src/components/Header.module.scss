@@ -101,7 +101,9 @@ nav {
 
         a, span {
             width: 25vw;
+            padding: 4px 0;
             font-size: 3.5vw;
+            text-align: center;
         }
 
         :first-child { border-left: none; }
@@ -121,6 +123,13 @@ nav {
             height: 28px;
         }
     }
+
+    nav {
+        a,span {
+            font-size: 12px;
+        }
+    }
+
     @keyframes type {
         0%, 50% { width: $cursor-width + px; }
         to { width: #{(19 * 9.5 + $cursor-width)}px; }
