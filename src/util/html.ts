@@ -15,7 +15,7 @@ const head = ({ title, desc, head }: PageArgs) => `\
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1 shrink-to-fit=no">
 
     <!-- Socials -->
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#252526">
     <meta property="og:title" content="${title}">
     <meta property="og:description" content="${desc}">
     <meta name="twitter:title" content="${title}">
