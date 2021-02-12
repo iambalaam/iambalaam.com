@@ -5,7 +5,6 @@ import Project from '../components/Project';
 
 export default function Experience() {
     return (<>
-        <h1>About</h1>
         <Project
             title={{ text: 'Amazon', href: '#' }}
             tagline="Prime Video"
