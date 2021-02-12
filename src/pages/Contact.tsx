@@ -6,7 +6,6 @@ export default function Contact() {
     return (<>
         <Project
             title="Get in touch"
-            href="#"
             techUsed={[]}
             frame={<WebsiteModel />}
         />

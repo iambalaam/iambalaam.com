@@ -8,7 +8,7 @@ export default function Experience() {
         <Project
             title="Amazon"
             tagline="Prime Video"
-            href="#"
+            href="https://www.amazon.co.uk/video"
             techUsed={[{ text: 'lots', href: '#' }]}
             frame={<Tick />}
         />
