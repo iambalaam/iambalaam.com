@@ -3,8 +3,9 @@ import * as s from './Project.module.scss';
 import { Link } from '../util/types';
 
 export interface ProjectProps {
-    title: Link,
-    tagline?: string;
+    href: string;
+    title: string,
+    tagline?: React.ReactChild;
     techUsed: Link[],
     frame: JSX.Element,
     images?: string[]
@@ -16,8 +17,8 @@ const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
 export default function Project(p: ProjectProps) {
     return (
         <div className={s.project}>
-            <a href={p.title.href}>
-                <h2 className={s.title}>{p.title.text}</h2>
+            <a href={p.href}>
+                <h2 className={s.title}>{p.title}</h2>
                 {p.tagline && <h3 className={s.tagline}>{p.tagline}</h3>}
             </a>
             <hr />

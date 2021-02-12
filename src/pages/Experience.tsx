@@ -6,8 +6,9 @@ import Project from '../components/Project';
 export default function Experience() {
     return (<>
         <Project
-            title={{ text: 'Amazon', href: '#' }}
+            title="Amazon"
             tagline="Prime Video"
+            href="#"
             techUsed={[{ text: 'lots', href: '#' }]}
             frame={<Tick />}
         />

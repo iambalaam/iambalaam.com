@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Project from '../components/Project';
+import * as s from '../components/Project.module.scss';
 import { Pencil, RewiredBot, WebsiteModel } from '../components/Models';
 
 import RewiredLogo from '../../static/rewired-logo.jpg';
@@ -32,8 +33,9 @@ export default function Projects() {
     return (
         <>
             <Project
-                title={{ text: 'Rewired', href: rewiredItch.href }}
-                tagline={'GMTK GameJam 2020: "Out Of Control"'}
+                title="Rewired"
+                href={rewiredItch.href}
+                tagline={<>GMTK GameJam 2020: <br className={s.softbreak} />"Out Of Control"</>}
                 techUsed={[unity, rewiredItch]}
                 frame={<RewiredBot />}
                 images={[RewiredLogo, RewiredFallOff]}
@@ -48,8 +50,9 @@ export default function Projects() {
                 </>}
             />
             <Project
-                title={{ text: 'Jousting', href: joustingItch.href }}
-                tagline={'GMTK GameJam 2019: "Only One"'}
+                title="Jousting"
+                href={joustingItch.href}
+                tagline={<>GMTK GameJam 2019: <br className={s.softbreak} />"Only One"</>}
                 techUsed={[p5js, socketIO, heroku, joustingItch]}
                 frame={<WebsiteModel />}
                 images={[Jousting]}
@@ -71,7 +74,8 @@ export default function Projects() {
                 </>}
             />
             <Project
-                title={{ text: 'photoshop-js', href: 'https://iambalaam.github.io/JSToys/photoshop-js/' }}
+                title="photoshop-js"
+                href="https://iambalaam.github.io/JSToys/photoshop-js/"
                 techUsed={[vanillaJS]}
                 frame={< Pencil />}
                 images={[Cat, Lightsaber]}
@@ -87,7 +91,8 @@ export default function Projects() {
                 </>}
             />
             <Project
-                title={{ text: 'iambalaam.com', href: 'https://iambalaam.com/' }}
+                title="iambalaam.com"
+                href="https://iambalaam.com/"
                 tagline="Front End"
                 techUsed={[dae2css, reactJS]}
                 frame={< WebsiteModel />}
@@ -105,7 +110,8 @@ export default function Projects() {
                 </>}
             />
             <Project
-                title={{ text: 'iambalaam.com', href: 'https://iambalaam.com/' }}
+                title="iambalaam.com"
+                href="https://iambalaam.com/"
                 tagline="Back End"
                 techUsed={[cloudflareWorkers, githubActions]}
                 frame={< WebsiteModel />}

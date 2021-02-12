@@ -5,7 +5,8 @@ import { WebsiteModel } from '../components/Models';
 export default function Contact() {
     return (<>
         <Project
-            title={{ text: 'Get in touch', href: '#' }}
+            title="Get in touch"
+            href="#"
             techUsed={[]}
             frame={<WebsiteModel />}
         />

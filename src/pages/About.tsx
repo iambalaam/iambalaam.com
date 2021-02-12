@@ -6,7 +6,8 @@ import Project from '../components/Project';
 export default function About() {
     return (<>
         <Project
-            title={{ text: 'About me', href: '#' }}
+            title="About me"
+            href='#'
             techUsed={[]}
             frame={<Skateboard />}
         />
