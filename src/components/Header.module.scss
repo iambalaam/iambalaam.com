@@ -37,10 +37,10 @@ $cursor-width: 4;
     }
 }
 
-// @keyframes type {
-//     0%, 50% { width: $cursor-width + px; }
-//     to { width: #{(19 * 24 + $cursor-width)}px; }
-// }
+@keyframes type {
+    0%, 50% { width: $cursor-width + px; }
+    to { width: #{(19 * 24 + $cursor-width)}px; }
+}
 
 @keyframes blink {
     from, to { border-right-color: transparent; }
