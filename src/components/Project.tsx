@@ -37,8 +37,10 @@ export default function Project(p: ProjectProps) {
                 {p.techUsed.map((link) => <a className={s.techUsed} key={link.href} href={link.href}>{link.text}</a>)}
             </div>
             <div className={s.container}>
-                <div className={s.description}>{p.description || <p>{lorem}</p>}</div>
-                {p.images && <div className={s.images}>{p.images.map((imgSrc, i) => <div className={`image${i}`} key={imgSrc}><img src={imgSrc} /></div>)}</div>}
+                <div className={s.flex}>
+                    <div className={s.description}>{p.description || <p>{lorem}</p>}</div>
+                    {p.images && <div className={s.images}>{p.images.map((imgSrc, i) => <div className={`image${i}`} key={imgSrc}><img src={imgSrc} /></div>)}</div>}
+                </div>
                 <div className={s.frame3d}>
                     {p.frame}
                 </div>

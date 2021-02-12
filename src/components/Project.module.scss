@@ -1,7 +1,9 @@
 @import '../util/colors.module.scss';
 
 .project {
-    // Largest viewport
+    // overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 50px;
     margin-top: 10vh;
     margin-bottom: 30vh;
 
@@ -37,10 +39,9 @@
 }
 
 .container {
+    position: relative;
     color: $off-white;
     margin-left: 4vw;
-    display: flex;
-    align-items: flex-start;
 
     img{
         width: 300px;
@@ -51,18 +52,90 @@
     }
 }
 
+.flex {
+    display: inline-flex;
+    align-items: flex-start;
+    width: calc(min(45vw, 800px));
+}
+
 .description {
     display: inline-block;
-    width: 30em;
 }
 .images {
+    margin-left: 10px;
     display: inline-block;
     * + * { margin-top: 10px;}
 }
 .frame3d {
-    margin-top: 125px;
-    margin-left: 350px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 70vw;
+    top: 100px;
+    display: inline-block;
 }
+
+
+
+@media (max-width: 1400px) {
+    .flex {
+        flex-direction: column;
+    }
+    .description {
+        order: 3;
+    }
+
+    .images {
+        order: 2;
+        margin: 0;
+        img {
+            width: unset;
+            height: 150px;
+        }
+        * {
+            display: inline-block;
+        }
+        * + * {
+             margin-top: unset; margin-left: 10px; 
+            }
+    }
+
+    .frame3d {
+        order: 1;
+        transform: scale(0.75);
+    }
+}
+
+@media (max-width: 1000px) {
+    .frame3d {
+        order: 1;
+        transform: scale(0.5);
+    }
+    .images img {
+        width: unset;
+        height: 100px;
+    }
+}
+
+@media (max-width: 700px) {
+    .flex { 
+        width: 100%; 
+    }
+    .frame3d {
+        position: relative;
+        display: block;
+        margin: auto;
+        left: unset;
+        top: unset;
+        height: 250px;
+    }
+}
+@media (max-width: 350px) {
+    .frame3d {
+        transform: scale(0.4);
+    }
+}
+
 
 .softbreak {
     @media (min-width: 550px) {
