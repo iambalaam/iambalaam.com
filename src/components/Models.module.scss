@@ -6,7 +6,6 @@
 }
 
 .icoFrame {
-    overflow: hidden;
     width: 0;
     height: 0;
     margin: 200px;
@@ -16,10 +15,7 @@
 }
 
 .webFrame, .rewiredFrame, .pencilFrame, .tickFrame, .skateboardFrame {
-    overflow: hidden;
     perspective: 500px;
-    height: 300px;
-    width: 400px;
     position: relative;
 }
 
@@ -98,24 +94,24 @@
 
 @keyframes tiltAndSpin {
     0% {transform: rotateZ(35deg) rotateY(0) translateY(0px);}
-    25%{transform: rotateZ(30deg) rotateY(30deg) translateY(-10px);}
+    25%{transform: rotateZ(30deg) rotateY(30deg) translateY(-20px);}
     50%{transform: rotateZ(40deg) rotateY(60deg)  translateY(0px);}
-    75%{transform: rotateZ(30deg) rotateY(90deg) translateY(-10px);}
+    75%{transform: rotateZ(30deg) rotateY(90deg) translateY(-20px);}
     100% {transform: rotateZ(35deg) rotateY(120deg)  translateY(0px);}
 }
 
 @keyframes kickflip {
-    0%, 13% { transform: translateX(0px) translateY(100px) rotateZ(0) rotateX(0) }
+    0%, 13% { transform: translateX(0px) translateY(200px) rotateZ(0) rotateX(0) }
     // Pop
-    15% { transform: translateX(-10px) translateY(50px) rotateZ(-55deg) rotateX(5deg) }
-    20% { transform: translateX(-20px) translateY(-20px) rotateZ(-75deg) rotateX(15deg) }
+    15% { transform: translateX(-20px) translateY(100px) rotateZ(-55deg) rotateX(5deg) }
+    20% { transform: translateX(-40px) translateY(-40px) rotateZ(-75deg) rotateX(15deg) }
     // Kick
-    40% { transform: translateX(0px) translateY(-70px) rotateZ(-20deg) rotateX(180deg) }
-    60% { transform: translateX(40px) translateY(-50px) rotateZ(5deg) rotateX(360deg) }
+    30% { transform: translateX(0px) translateY(-140px) rotateZ(-20deg) rotateX(180deg) }
+    40% { transform: translateX(80px) translateY(-100px) rotateZ(5deg) rotateX(360deg) }
     // Catch
-    65% { transform: translateY(20px) rotateZ(5deg) rotateX(360deg) }
+    45% { transform: translateY(40px) rotateZ(5deg) rotateX(360deg) }
     // Fall
-    70%, 100% { transform: translateY(0px) translateY(100px) rotateZ(0deg) rotateX(360deg) }
+    50%, 100% { transform: translateY(0px) translateY(200px) rotateZ(0deg) rotateX(360deg) }
 }
 
 @keyframes bob {

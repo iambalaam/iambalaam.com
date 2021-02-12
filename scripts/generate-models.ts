@@ -11,7 +11,7 @@ const modelFiles = readdirSync(MODEL_DIR);
         const [filename, ext] = file.split('.');
         if (ext !== 'dae') continue;
 
-        const html = await renderCSSTriangles(`${MODEL_DIR}/${file}`, 100, `triangle ${filename}`);
+        const html = await renderCSSTriangles(`${MODEL_DIR}/${file}`, 200, `triangle ${filename}`);
         const htmlTemplateFile = `${MODEL_DIR}/${file.replace('.dae', '.xhtml.js')}`;
         writeFileSync(htmlTemplateFile, `module.exports = { html: '${html}' }`);
     }
