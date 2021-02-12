@@ -11,6 +11,12 @@
   80% { transform: rotate(10deg); }
 }
 
+@media (max-width: 850px) {
+  .githubCorner {
+    display: none;
+  }
+}
+
 @media (max-width: 500px) {
   .githubCorner:hover .octoArm {
     animation: none;

@@ -6,9 +6,9 @@ $cursor-width: 4;
     position: sticky;
     z-index: 100;
     top: 0;
-    font-size: 40px;
     background-color: $bg-dark;
     color: $off-white;
+    font-size: 40px;
 
     .top { 
        height: 60px;
@@ -37,10 +37,10 @@ $cursor-width: 4;
     }
 }
 
-@keyframes type {
-    0%, 50% { width: $cursor-width + px; }
-    to { width: #{(19 * 24 + $cursor-width)}px; }
-}
+// @keyframes type {
+//     0%, 50% { width: $cursor-width + px; }
+//     to { width: #{(19 * 24 + $cursor-width)}px; }
+// }
 
 @keyframes blink {
     from, to { border-right-color: transparent; }
@@ -51,7 +51,7 @@ nav {
     font-size: large;
     color: $off-white;
     border-bottom: 1px solid black;
-    padding-left: 4vw;
+    padding: 0 10px;
 
     :first-child {
         border-left: 1px solid black;
@@ -71,5 +71,58 @@ nav {
         background-color: $bg-light;
         border-top: 1px solid black;
         box-shadow: 0 1px 0 0 $bg-light;
+    }
+}
+
+@media (max-width: 850px) {
+    .header {
+        font-size: 28px;
+        .top {
+            height: 44px;
+        }
+    }
+
+    @keyframes type {
+        0%, 50% { width: $cursor-width + px; }
+        to { width: #{(19 * 16.8 + $cursor-width)}px; }
+    }
+}
+
+@media (max-width: 550px) {
+    .header {
+        font-size: 21px;
+        .top {
+            height: 36x;
+        }
+    }
+
+    nav {
+        padding: 0;
+
+        a, span {
+            width: 25vw;
+            font-size: 3.5vw;
+        }
+
+        :first-child { border-left: none; }
+        :last-child { border-right: none; }
+    }
+
+    @keyframes type {
+        0%, 50% { width: $cursor-width + px; }
+        to { width: #{(19 * 12.5 + $cursor-width)}px; }
+    }
+}
+
+@media (max-width: 420px) {
+    .header {
+        font-size: 16px;
+        .top {
+            height: 28px;
+        }
+    }
+    @keyframes type {
+        0%, 50% { width: $cursor-width + px; }
+        to { width: #{(19 * 9.5 + $cursor-width)}px; }
     }
 }
