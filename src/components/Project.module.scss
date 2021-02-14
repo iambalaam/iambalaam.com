@@ -118,6 +118,9 @@
 }
 
 @media (max-width: 700px) {
+    .container {
+        margin-right: 4vw;
+    }
     .flex { 
         width: 100%; 
     }
