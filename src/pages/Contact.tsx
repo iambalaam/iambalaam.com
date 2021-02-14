@@ -8,6 +8,11 @@ export default function Contact() {
             title="Get in touch"
             techUsed={[]}
             frame={<WebsiteModel />}
+            description={
+                <p>
+                    @ <a href="mailto:hi@iambalaam.com">hi@iambalaam.com</a>
+                </p>
+            }
         />
     </>)
 }
