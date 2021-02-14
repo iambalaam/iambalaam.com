@@ -81,12 +81,11 @@ export default function Projects() {
                 images={[Cat, Lightsaber]}
                 description={<>
                     <p>
-                        I set out to make a drawing application in the browser in the least performant way possible.
+                        I set out to make a drawing application in the browser in the least performant way possible, to test what was possible in the browser.
                         Instead of using a canavs to draw pixels, I made vector art by positioning DOM elements.
                     </p>
                     <p>
-                        {/* This is lacking enthusiasm 😅 */}
-                        The prototype performed much better than expected, and challenged a lot of assumptions I had about the browser.
+                        The prototype performed smoothy and worked much better than expected, and challenged a lot of assumptions I had about the browser.
                     </p>
                 </>}
             />
@@ -98,7 +97,6 @@ export default function Projects() {
                 frame={< WebsiteModel />}
                 description={<>
                     <p>
-                        {/* Why did I make this? */}
                         Following my 2D vector art with <a href="#photoshop-js">photoshop-js</a>, I wanted to test how well the browser would render 3D models using CSS and DOM elements.
                     </p>
                     <p>
