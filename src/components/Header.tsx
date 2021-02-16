@@ -24,8 +24,8 @@ export default function Header() {
                     const route = Route.toLowerCase();
                     const target = '/' + route;
                     return (path === target)
-                        ? <span className={s.selected}>{Route}</span>
-                        : <NavLink to={target}>{Route}</NavLink>
+                        ? <span key={Route} className={s.selected}>{Route}</span>
+                        : <NavLink key={Route} to={target}>{Route}</NavLink>
                 })
             }</nav>
         </header>
