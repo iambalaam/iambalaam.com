@@ -27,6 +27,13 @@ import { html as skateboardGraphic } from '../../models/skateboard-graphic.xhtml
 import { html as skateboardTrucks } from '../../models/skateboard-trucks.xhtml.js';
 import { html as skateboardWheels } from '../../models/skateboard-wheels.xhtml.js';
 
+import { html as emailBack } from '../../models/email-back.xhtml.js';
+import { html as emailBottom } from '../../models/email-bottom.xhtml.js';
+import { html as emailFlap } from '../../models/email-flap.xhtml.js';
+import { html as emailInside } from '../../models/email-inside.xhtml.js';
+import { html as emailOutside } from '../../models/email-outside.xhtml.js';
+import { html as emailTriangles } from '../../models/email-triangles.xhtml.js';
+
 import { html as tick } from '../../models/tick.xhtml.js';
 
 
@@ -66,6 +73,20 @@ export function Tick() {
     return (
         <div className={s.tickFrame}>
             <div className={s.bob} dangerouslySetInnerHTML={{ __html: tick }}></div>
+        </div>
+    );
+}
+
+export function Email() {
+    return (
+        <div className={s.emailFrame}>
+            <div className={s.offAngle}>
+                {/* <div className={s.flapOffset}> */}
+                <div className={s.openClose} dangerouslySetInnerHTML={{ __html: emailFlap }}></div>
+                {/* </div> */}
+                <div className={s.envelope} dangerouslySetInnerHTML={{ __html: emailBack + emailBottom + emailInside + emailOutside + emailTriangles }}></div>
+                <div className={s.letter}>hi</div>
+            </div>
         </div>
     );
 }

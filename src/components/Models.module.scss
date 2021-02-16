@@ -21,24 +21,12 @@
     position: relative;
 }
 
-.spin {
-    transform-style: preserve-3d;
-    animation: spin 20s linear infinite;
-}
-
-.tiltAndSpin {
-    transform-style: preserve-3d;
-    animation: tiltAndSpin 5s ease-out infinite;
-}
-
-.kickflip {
-    transform-style: preserve-3d;
-    animation: kickflip 5s linear infinite;
-}
-
-.bob {
-    transform-style: preserve-3d;
-    animation: bob 5s linear infinite;
+.emailFrame {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    perspective: 1000px;
+    position: relative;
 }
 
 // Rewired Bot Colors
@@ -68,6 +56,16 @@
 // Tick Colours
 :global(.triangle.tick) {border-bottom-color: rgb(235, 174, 43);}
 
+// Email Colors
+:global(.triangle.email-back) {border-bottom-color: rgb(131, 131, 131);}
+:global(.triangle.email-bottom) {border-bottom-color: rgb(192, 192, 192);}
+:global(.triangle.email-flap) {border-bottom-color: rgb(202, 201, 201); backface-visibility: visible;}
+:global(.triangle.email-inside) {border-bottom-color: rgb(131, 131, 131);}
+:global(.triangle.email-outside) {border-bottom-color: rgb(212, 212, 212);}
+:global(.triangle.email-triangles) {border-bottom-color: rgb(235, 235, 235);}
+.letter { background-color: white;}
+
+
 :global(.triangle.icosphere) {
     border-bottom-color: rgba(255,0,0,0.2);
 }
@@ -77,11 +75,19 @@
     border-bottom-color: rgba(4, 150, 218, 0.4);
 }
 
+.spin {
+    transform-style: preserve-3d;
+    animation: spin 20s linear infinite;
+}
 @keyframes spin {
     0% {transform: rotateX(-20deg) rotateY(0);}
     100% {transform: rotateX(-20deg) rotateY(360deg);}
 }
 
+.tiltAndSpin {
+    transform-style: preserve-3d;
+    animation: tiltAndSpin 5s ease-out infinite;
+}
 @keyframes tiltAndSpin {
     0% {transform: rotateZ(35deg) rotateY(0) translateY(0px);}
     25%{transform: rotateZ(30deg) rotateY(30deg) translateY(-20px);}
@@ -90,6 +96,10 @@
     100% {transform: rotateZ(35deg) rotateY(120deg)  translateY(0px);}
 }
 
+.kickflip {
+    transform-style: preserve-3d;
+    animation: kickflip 5s linear infinite;
+}
 @keyframes kickflip {
     0%, 13% { transform: translateX(0px) translateY(200px) rotateZ(0) rotateX(0) }
     // Pop
@@ -104,7 +114,50 @@
     50%, 100% { transform: translateY(0px) translateY(200px) rotateZ(0deg) rotateX(360deg) }
 }
 
+.bob {
+    transform-style: preserve-3d;
+    animation: bob 5s linear infinite;
+}
+
 @keyframes bob {
     0% {transform: rotateY(0deg) rotateX(5deg)  rotateY(0deg);}
     100% {transform: rotateY(-360deg) rotateX(5deg)  rotateY(360deg);}
+}
+
+.offAngle {
+    transform-style: preserve-3d;
+    transform: rotateY(-20deg);
+}
+.openClose {
+    transform-style: preserve-3d;
+    transform-origin: center -120px 0;
+    transition: 300ms;
+    transform: translate3d(-21px, -5px, 14px) rotateX(-180deg);
+}
+.envelope {
+    transform-style: preserve-3d;
+    transform: scaleX(-1);
+}
+.letter {
+    border: 4px solid $bg-dark;
+    border-bottom-width: 0;
+    font-size: 100px;
+    text-align: center;
+    width: 350px;
+    height: 240px;
+    color: $bg-dark;
+    transition: transform 500ms 0ms;
+    transform: translate(-50%, -50%);
+}
+.emailFrame {
+    *:hover, *:focus {
+        .openClose {
+            transition: transform 300ms;
+            transform: translate3d(-21px, 42px, -1px) rotateX(0deg);
+        }
+        .letter {
+            transition: transform 500ms 0ms;
+            transform: translate(-50%, -70%);
+        }
+    }
 }
