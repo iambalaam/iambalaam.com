@@ -70,9 +70,11 @@
     border-bottom-color: rgba(255,0,0,0.2);
 }
 
-:global(.triangle.website) {
-    backface-visibility: visible;
-    border-bottom-color: rgba(4, 150, 218, 0.4);
+:global(.triangle.website-inside) {
+    border-bottom-color: rgb(4, 150, 218);
+}
+:global(.triangle.website-outside) {
+    border-bottom-color: rgb(4, 150, 218);
 }
 
 .spin {

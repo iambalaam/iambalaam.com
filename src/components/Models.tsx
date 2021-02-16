@@ -3,7 +3,8 @@ import * as React from 'react';
 import '../../models/required.module.scss';
 import * as s from './Models.module.scss';
 
-import { html as website } from '../../models/website.xhtml.js';
+import { html as websiteInside } from '../../models/website-inside.xhtml.js';
+import { html as websiteOutside } from '../../models/website-outside.xhtml.js';
 import { html as icosphere } from '../../models/icosphere.xhtml.js';
 
 import { html as rewiredAntenna } from '../../models/rewired-antenna.xhtml.js';
@@ -37,10 +38,18 @@ import { html as emailTriangles } from '../../models/email-triangles.xhtml.js';
 import { html as tick } from '../../models/tick.xhtml.js';
 
 
-export function WebsiteModel() {
+export function WebsiteInside() {
     return (
         <div className={s.webFrame}>
-            <div className={s.spin} dangerouslySetInnerHTML={{ __html: website }}></div>
+            <div className={s.spin} dangerouslySetInnerHTML={{ __html: websiteInside }}></div>
+        </div>
+    );
+}
+
+export function WebsiteOutside() {
+    return (
+        <div className={s.webFrame}>
+            <div className={s.spin} dangerouslySetInnerHTML={{ __html: websiteOutside }}></div>
         </div>
     );
 }

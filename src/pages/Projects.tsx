@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Project from '../components/Project';
 import * as s from '../components/Project.module.scss';
-import { Pencil, RewiredBot, WebsiteModel } from '../components/Models';
+import { Pencil, RewiredBot, WebsiteInside, WebsiteOutside } from '../components/Models';
 
 import RewiredLogo from '../../static/rewired-logo.jpg';
 import RewiredFallOff from '../../static/rewired-fall-off.gif';
@@ -54,7 +54,7 @@ export default function Projects() {
                 href={joustingItch.href}
                 tagline={<>GMTK GameJam 2019: <br className={s.softbreak} />"Only One"</>}
                 techUsed={[p5js, socketIO, heroku, joustingItch]}
-                frame={<WebsiteModel />}
+                frame={<WebsiteOutside />}
                 images={[Jousting]}
                 description={<>
                     <p>
@@ -77,7 +77,7 @@ export default function Projects() {
                 title="photoshop-js"
                 href="https://iambalaam.github.io/JSToys/photoshop-js/"
                 techUsed={[vanillaJS]}
-                frame={< Pencil />}
+                frame={<Pencil />}
                 images={[Cat, Lightsaber]}
                 description={<>
                     <p>
@@ -94,7 +94,7 @@ export default function Projects() {
                 href="https://iambalaam.com/"
                 tagline="Front End"
                 techUsed={[dae2css, reactJS]}
-                frame={< WebsiteModel />}
+                frame={<WebsiteOutside />}
                 description={<>
                     <p>
                         Following my 2D vector art with <a href="#photoshop-js">photoshop-js</a>, I wanted to test how well the browser would render 3D models using CSS and DOM elements.
@@ -112,7 +112,7 @@ export default function Projects() {
                 href="https://iambalaam.com/"
                 tagline="Back End"
                 techUsed={[cloudflareWorkers, githubActions]}
-                frame={< WebsiteModel />}
+                frame={<WebsiteInside />}
                 images={[Cloudflare, GithubActions]}
                 description={<>
                     <p>
