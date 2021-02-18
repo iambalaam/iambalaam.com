@@ -6,6 +6,7 @@ export interface ProjectProps {
     title: string,
     tagline?: React.ReactChild;
     href?: string;
+    id?: string;
     techUsed: Link[],
     frame: JSX.Element,
     images?: string[]
@@ -30,7 +31,7 @@ export default function Project(p: ProjectProps) {
         )
 
     return (
-        <div className={s.project}>
+        <div id={p.id} className={s.project}>
             {header}
             <hr />
             <div className={s.techList}>

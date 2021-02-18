@@ -6,6 +6,7 @@ export default function Contact() {
     return (<>
         <Project
             title="Get in touch"
+            id="contact"
             techUsed={[]}
             frame={<Email />}
             description={

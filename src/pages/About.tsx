@@ -7,6 +7,7 @@ export default function About() {
     return (<>
         <Project
             title="About me"
+            id="about"
             techUsed={[]}
             frame={<Skateboard />}
         />

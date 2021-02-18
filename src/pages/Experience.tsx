@@ -14,6 +14,7 @@ export default function Experience() {
     return (<>
         <Project
             title="Amazon"
+            id="amazon"
             tagline="Prime Video"
             href="https://www.amazon.co.uk/video"
             techUsed={[nodeJS, reactJS, express, selenium, testNG]}

@@ -34,6 +34,7 @@ export default function Projects() {
         <>
             <Project
                 title="Rewired"
+                id="rewired"
                 href={rewiredItch.href}
                 tagline={<>GMTK GameJam 2020: <br className={s.softbreak} />"Out Of Control"</>}
                 techUsed={[unity, rewiredItch]}
@@ -51,6 +52,7 @@ export default function Projects() {
             />
             <Project
                 title="Jousting"
+                id="jousting"
                 href={joustingItch.href}
                 tagline={<>GMTK GameJam 2019: <br className={s.softbreak} />"Only One"</>}
                 techUsed={[p5js, socketIO, heroku, joustingItch]}
@@ -75,6 +77,7 @@ export default function Projects() {
             />
             <Project
                 title="photoshop-js"
+                id="photoshop-js"
                 href="https://iambalaam.github.io/JSToys/photoshop-js/"
                 techUsed={[vanillaJS]}
                 frame={<Pencil />}
@@ -91,6 +94,7 @@ export default function Projects() {
             />
             <Project
                 title="iambalaam.com"
+                id="iambalaam-frontend"
                 href="https://iambalaam.com/"
                 tagline="Front End"
                 techUsed={[dae2css, reactJS]}
@@ -109,6 +113,7 @@ export default function Projects() {
             />
             <Project
                 title="iambalaam.com"
+                id="iambalaam-backend"
                 href="https://iambalaam.com/"
                 tagline="Back End"
                 techUsed={[cloudflareWorkers, githubActions]}
