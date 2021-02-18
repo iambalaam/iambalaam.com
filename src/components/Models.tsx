@@ -35,7 +35,8 @@ import { html as emailInside } from '../../models/email-inside.xhtml.js';
 import { html as emailOutside } from '../../models/email-outside.xhtml.js';
 import { html as emailTriangles } from '../../models/email-triangles.xhtml.js';
 
-import { html as tick } from '../../models/tick.xhtml.js';
+import { html as tickFront } from '../../models/tick-front.xhtml.js';
+import { html as tickSides } from '../../models/tick-sides.xhtml.js';
 
 
 export function WebsiteInside() {
@@ -81,7 +82,7 @@ export function Skateboard() {
 export function Tick() {
     return (
         <div className={s.tickFrame}>
-            <div className={s.bob} dangerouslySetInnerHTML={{ __html: tick }}></div>
+            <div className={s.bob} dangerouslySetInnerHTML={{ __html: tickFront + tickSides }}></div>
         </div>
     );
 }

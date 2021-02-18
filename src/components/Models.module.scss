@@ -54,7 +54,8 @@
 :global(.triangle.skateboard-wheels) {border-bottom-color: rgb(243, 243, 215);}
 
 // Tick Colours
-:global(.triangle.tick) {border-bottom-color: rgb(235, 174, 43);}
+:global(.triangle.tick-front) {border-bottom-color: $yellow;}
+:global(.triangle.tick-sides) {border-bottom-color: $orange;}
 
 // Email Colors
 :global(.triangle.email-back) {border-bottom-color: rgb(131, 131, 131);}
