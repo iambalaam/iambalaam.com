@@ -11,7 +11,9 @@ export default function Contact() {
             frame={<Email />}
             description={
                 <p>
-                    @ <a href="mailto:hi@iambalaam.com">hi@iambalaam.com</a>
+                    Let's work togther!
+                    <br />
+                    <a href="mailto:hi@iambalaam.com">hi@iambalaam.com</a>
                 </p>
             }
         />

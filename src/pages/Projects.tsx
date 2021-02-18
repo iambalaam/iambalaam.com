@@ -42,11 +42,16 @@ export default function Projects() {
                 images={[RewiredLogo, RewiredFallOff]}
                 description={<>
                     <p>
-                        I teamed up with a 3D artist that did an amazing job on the modelling and texturing.
-                        We designed a game where you interfere with your opponents input, leaving them <em>Out Of Control</em>.
+                        I teamed up with a 3D artist to make a game in 48 hours - all the amazing modelling and texturing is their work, all the game logic and programming is mine.
+                        We designed a fighting game that lets you interfere with your opponents input, leaving them <em>Out Of Control</em>.
                     </p>
                     <p>
-                        <a href="https://www.youtube.com/c/DotSlashFrag">DotSlashFrag</a> found our game on Itch and <a href="https://www.youtube.com/watch?v=Xq9xE4kE8xQ">uploaded a let's play</a>.
+                        We managed to prototype our game in the first 10 minutes of the jam by maliciously setting each others controls on games we already owned.
+                        Immediately we found the hook of the game was when you change your opponent's controls just as they learn to use the previous ones, so we implemented dynamic remapping to our control system.
+                        Controller support came as an added bonus for free as we could remap it in the same way.
+                    </p>
+                    <p>
+                        <a href="https://www.youtube.com/c/DotSlashFrag">DotSlashFrag</a> found our game on Itch independently of the jam and <a href="https://www.youtube.com/watch?v=Xq9xE4kE8xQ">uploaded a let's play</a>.
                     </p>
                 </>}
             />
@@ -64,7 +69,7 @@ export default function Projects() {
                     </p>
                     <p>
                         I decided to create an online multiplayer game as before this I had only made single player games.
-                        Being my first game jam, I stuck to what I knew and designed it to work in the browser.
+                        As it was my first game jam, and I only had 2 days, I stuck to what I knew and designed it to work in the browser.
                         I learnt to use websockets between players, wrote a simple physics engine and used <a href={p5js.href}>{p5js.text}</a> to render the canvas.
                     </p>
                     <p>
@@ -84,8 +89,8 @@ export default function Projects() {
                 images={[Cat, Lightsaber]}
                 description={<>
                     <p>
-                        I set out to make a drawing application in the browser in the least performant way possible, to test what was possible in the browser.
-                        Instead of using a canavs to draw pixels, I made vector art by positioning DOM elements.
+                        I set out to make a drawing application in the browser without drawing on a <code>&lt;canvas /&gt;</code>.
+                        I made vector art by positioning DOM elements, even though I thought it wouldn't be performant enough to use.
                     </p>
                     <p>
                         The prototype performed smoothy and worked much better than expected, and challenged a lot of assumptions I had about the browser.
