@@ -100,7 +100,10 @@
 
 .kickflip {
     transform-style: preserve-3d;
+    // Initial animation position
+    transform: translateX(0px) translateY(200px) rotateZ(0) rotateX(0);
     animation: kickflip 5s linear infinite;
+    animation-delay: 3s;
 }
 @keyframes kickflip {
     0%, 13% { transform: translateX(0px) translateY(200px) rotateZ(0) rotateX(0) }
