@@ -42,16 +42,24 @@ export default function Projects() {
                 images={[RewiredLogo, RewiredFallOff]}
                 description={<>
                     <p>
-                        I teamed up with a 3D artist to make a game in 48 hours - all the amazing modelling and texturing is their work, all the game logic and programming is mine.
-                        We designed a fighting game that lets you interfere with your opponents input, leaving them <em>Out Of Control</em>.
+                        In the GMTK GameJam 2020 we were given 48 hours to create a game given the brief "<em>Out of Control</em>".
+                        I teamed up with a 3D artist to make a our game - all the amazing modelling and texturing is their work, all the game logic and programming is mine.
+                        We came up with a fighting game that lets you interfere with your opponents input, leaving them <em>Out Of Control</em>.
                     </p>
                     <p>
-                        We managed to prototype our game in the first 10 minutes of the jam by maliciously setting each others controls on games we already owned.
-                        Immediately we found the hook of the game was when you change your opponent's controls just as they learn to use the previous ones, so we implemented dynamic remapping to our control system.
-                        Controller support came as an added bonus for free as we could remap it in the same way.
+                        Instead of getting straight to programming, we tested our idea to see if it was as fun as we'd thought.
+                        We played fighting games we already owned and changed eachothers controls to make it as hard as possible.
+                        The hook of the game became obvious - changing your opponent's controls just as they learnt to use the previous ones.
                     </p>
                     <p>
-                        <a href="https://www.youtube.com/c/DotSlashFrag">DotSlashFrag</a> found our game on Itch independently of the jam and <a href="https://www.youtube.com/watch?v=Xq9xE4kE8xQ">uploaded a let's play</a>.
+                        In the gif you can see the blue player flips forwards/backwards for the orange player.
+                    </p>
+                    <p>
+                        I implemented a dynamic control system that allows remapping at runtime.
+                        When a player collects a modifier, another mapping is added to their opponent (who might already have many mappings applied).
+                    </p>
+                    <p>
+                        <a href="https://www.youtube.com/c/DotSlashFrag">DotSlashFrag</a> found our game on Itch independently of the jam and <a href="https://www.youtube.com/watch?v=Xq9xE4kE8xQ">reviewed it in a <em>let's play</em></a>.
                     </p>
                 </>}
             />
@@ -65,6 +73,7 @@ export default function Projects() {
                 images={[Jousting]}
                 description={<>
                     <p>
+                        The brief for this game jam was "<em>Only One</em>".
                         I wanted to make a game with <em>Only One</em> input, so it could be played by anyone with a mouse or touch device.
                     </p>
                     <p>
@@ -89,30 +98,37 @@ export default function Projects() {
                 images={[Cat, Lightsaber]}
                 description={<>
                     <p>
-                        I set out to make a drawing application in the browser without drawing on a <code>&lt;canvas /&gt;</code>.
-                        I made vector art by positioning DOM elements, even though I thought it wouldn't be performant enough to use.
+                        Drawing anything in the browser that isn't a circle or a rectangle normally relies on rendering pixels on a bitmap canvas.
+                        This approach is boring.
+                        I set out to challenge these norms and to make a drawing application without using a canvas.
                     </p>
                     <p>
-                        The prototype performed smoothy and worked much better than expected, and challenged a lot of assumptions I had about the browser.
+                        I made a <a href="https://codepen.io/iambalaam/pen/vzzjVg">proof of concept</a> drawing a line between two points by positioning DOM elements.
+                        Then, I used this to make vector art with hundreds, or thousands, of these line segments.
+                    </p>
+                    <p>
+                        I previously thought that adding this many elements to the DOM in real time would crash the browser.
+                        To my surprise it performed perfectly smoothly and challenged assumptions I had about web development.
                     </p>
                 </>}
             />
             <Project
-                title="iambalaam.com"
-                id="iambalaam-frontend"
-                href="https://iambalaam.com/"
-                tagline="Front End"
-                techUsed={[dae2css, reactJS]}
+                title="dae2css"
+                id="dae2css"
+                href={dae2css.href}
+                techUsed={[dae2css]}
                 frame={<WebsiteOutside />}
                 description={<>
                     <p>
+                        I wrote and published my first open source npm module <a href={dae2css.href}><code>dae2css</code></a> that renders 3D models as individual DOM elements.
+                        {/* Add debug in the nav? */}
+                    </p>
+                    <p>
                         Following my 2D vector art with <a href="#photoshop-js">photoshop-js</a>, I wanted to test how well the browser would render 3D models using CSS and DOM elements.
+                        At the same time I was practising low-poly modelling in blender to help speed up creation of game prototypes in Unity and I realised I could showcase these on this website.
                     </p>
                     <p>
-                        I wrote and published my first npm module <a href={dae2css.href}><code>dae2css</code></a> to encapsulate all the fun linear algebra.
-                    </p>
-                    <p>
-                        There are some rendering bugs (especially on chrome) that I won't be able to fix, but I think it's still an entertaining addition to the site.
+
                     </p>
                 </>}
             />
@@ -121,12 +137,17 @@ export default function Projects() {
                 id="iambalaam-backend"
                 href="https://iambalaam.com/"
                 tagline="Back End"
-                techUsed={[cloudflareWorkers, githubActions]}
+                techUsed={[cloudflareWorkers, githubActions, reactJS]}
                 frame={<WebsiteInside />}
                 images={[Cloudflare, GithubActions]}
                 description={<>
                     <p>
-                        I wanted a site with a few moving parts as possible, so I adopted a serverless architecture.
+                        I wanted to serve this website in a unique way, with a few moving parts as possible.
+                        After attending <a href="https://2019.jsconf.eu/ashley-williams/javascripts-journey-to-the-edge.html">a talk by Ashley Williams at JS Conf EU 2019</a>, I wanted to try out Cloudflare Workers.
+                    </p>
+                    <p>
+                        This architecture would allow me to forget about a fleet of servers to host the website, and where continuous integration or file hosting would take place.
+                        I wanted to make a proof of concept (if you're reading this - it worked!).
                     </p>
                     <p>
                         Github Actions handle testing, building and deploying my code.  It also <a href="https://github.com/iambalaam/iambalaam.com/commits/dist">commits my build artifacts</a> to serve as free file hosting.
