@@ -10,7 +10,7 @@ import Contact from './pages/Contact';
 import NotFound from './pages/404';
 
 const App = () =>
-    <div>
+    <div id="app">
         <Header />
         <main>
             <Switch>
