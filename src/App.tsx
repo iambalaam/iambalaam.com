@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import './App.module.scss';
 
+import { DebugCheckbox } from './components/Debug';
 import Header from './components/Header';
 import About from './pages/About';
 import Projects from './pages/Projects';
@@ -12,6 +13,7 @@ import NotFound from './pages/404';
 const App = () =>
     <div id="app">
         <Header />
+        <DebugCheckbox />
         <main>
             <Switch>
                 <Redirect exact path="/" to="/about" />
