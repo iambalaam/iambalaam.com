@@ -15,7 +15,6 @@ import Cloudflare from '../../static/cloudflare.jpg';
 import GithubActions from '../../static/github-actions.jpg';
 
 import { Link } from '../util/types';
-import { DebugSwitch } from '../components/Debug';
 
 // Links
 const unity: Link = { text: 'Unity', href: 'https://unity.com/' };
@@ -122,9 +121,8 @@ export default function Projects() {
                 description={<>
                     <p>
                         I wrote and published my first open source npm module <a href={dae2css.href}><code>dae2css</code></a> that renders 3D models as individual DOM elements.
-                        You can highlight the elements with this switch:
+                        You can highlight the elements by hovering over models, or tapping on them with touch devices.
                     </p>
-                    <DebugSwitch />
                     <p>
                         Following my 2D vector art with <a href="#photoshop-js">photoshop-js</a>, I wanted to test how well the browser would render 3D models using CSS and DOM elements.
                         At the same time I was practising low-poly modelling in blender to help speed up creation of game prototypes in Unity and I realised I could showcase these on this website.

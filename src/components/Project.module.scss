@@ -72,6 +72,12 @@
     display: inline-block;
 }
 
+.frame3d:hover, .frame3d:focus {
+    :global(.triangle) {
+        outline: 2px solid $red;
+    }    
+}
+
 
 
 @media (max-width: 1400px) {

@@ -137,9 +137,16 @@
 .openClose {
     transform-style: preserve-3d;
     transform-origin: center -120px 0;
-    transition: 300ms;
     transform: translate3d(-21px, -5px, 14px) rotateX(-180deg);
+    animation: openClose 10s ease infinite;
+    animation-delay: 3s;
 }
+@keyframes openClose {
+    4% { transform: translate3d(-21px, 42px, -1px) rotateX(0deg); }
+    40% { transform: translate3d(-21px, 42px, -1px) rotateX(0deg); }
+    44% { transform: translate3d(-21px, -5px, 14px) rotateX(-180deg); }
+}
+
 .envelope {
     transform-style: preserve-3d;
     transform: scaleX(-1);
@@ -152,18 +159,13 @@
     width: 350px;
     height: 240px;
     color: $bg-dark;
-    transition: transform 500ms 0ms;
     transform: translate(-50%, -50%);
+    animation: letter 10s ease infinite;
+    animation-delay: 3s;
 }
-.emailFrame {
-    *:hover, *:focus {
-        .openClose {
-            transition: transform 300ms;
-            transform: translate3d(-21px, 42px, -1px) rotateX(0deg);
-        }
-        .letter {
-            transition: transform 500ms 0ms;
-            transform: translate(-50%, -70%);
-        }
-    }
+@keyframes letter {
+    4% { transform: translate(-50%, -50%); }
+    8% { transform: translate(-50%, -70%); }
+    36% { transform: translate(-50%, -70%); }
+    40% { transform: translate(-50%, -50%); }
 }
