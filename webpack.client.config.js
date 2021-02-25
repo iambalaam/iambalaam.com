@@ -29,6 +29,15 @@ module.exports = {
                             modules: { localIdentName: '[local]' },
                         }
                     }, {
+                        loader: 'postcss-loader',
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    ["postcss-preset-env", { /* Options */ }]
+                                ]
+                            }
+                        }
+                    }, {
                         loader: 'sass-loader'
                     }
                 ]
