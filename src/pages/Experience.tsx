@@ -26,9 +26,13 @@ export default function Experience() {
                         I spent 4 years working on the platform and infrastructure team for the Amazon Prime Video website, working directly with a team of developers, designers and QAs.
                     </p>
                     <p>
-                        It was great to work with such a large team towards a shared goal.
-                        We all brought our own strengths and specialisms to the table, allowing everyone to learn.
-                        Sometimes the needs of feature teams and the platform team were at odds; the different viewpoints and the compromises we made lead to a better overall product and experience for the customer.
+                        The platform team supported other teams creating features for the Prime Video website.
+                        We focused on:
+                        <ul>
+                            <li>Creating tooling and automation to reduce pain for developers</li>
+                            <li>Improving the website's resilience against outages</li>
+                            <li>Investigating and prototyping complex technical challenges</li>
+                        </ul>
                     </p>
                     <hr />
 
