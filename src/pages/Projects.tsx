@@ -48,7 +48,7 @@ export default function Projects() {
                     </p>
                     <p>
                         Instead of getting straight to programming, we tested our idea to see if it was as fun as we'd thought.
-                        We played fighting games we already owned and changed eachothers controls to make it as hard as possible.
+                        We played fighting games we already owned and changed each others controls to make it as hard as possible.
                         The hook of the game became obvious - changing your opponent's controls just as they learnt to use the previous ones.
                     </p>
                     <p>
@@ -85,7 +85,7 @@ export default function Projects() {
                         I designed the game to reward an aggressive playstyle, so the players sword gets longer the faster they are travelling, encouraging aerial combat.
                     </p>
                     <p>
-                        I took inspiraton from <a href="https://www.youtube.com/watch?v=sQwBuaik9lA">Super Pole Riders</a> for the pole vault mechanics.
+                        I took inspiration from <a href="https://www.youtube.com/watch?v=sQwBuaik9lA">Super Pole Riders</a> for the pole vault mechanics.
                     </p>
                 </>}
             />

@@ -23,13 +23,12 @@ export default function Experience() {
                 <>
                     <h3>Web Team</h3>
                     <p>
-                        I was part of the Prime Video website team of 50 developers, designers, QAs and managers.
-                        The Team is split up into subteams of around 10 working on features, as well as a separate platform and infrastructure team that I was a part of.
+                        I spent 4 years working on the platform and infrastructure team for the Amazon Prime Video website, working directly with a team of developers, designers and QAs.
                     </p>
                     <p>
                         It was great to work with such a large team towards a shared goal.
                         We all brought our own strengths and specialisms to the table, allowing everyone to learn.
-                        Sometimes the needs of feature teams and the platform team were at odds; the different viewpoints and the comprimises we made lead to a better overall product and experience for the customer.
+                        Sometimes the needs of feature teams and the platform team were at odds; the different viewpoints and the compromises we made lead to a better overall product and experience for the customer.
                     </p>
                     <hr />
 
@@ -41,7 +40,7 @@ export default function Experience() {
                         {/* Google have written a great summary of <a href="https://developers.google.com/web/updates/2019/02/rendering-on-the-web">rendering on the web</a>. */}
                     </p>
                     <p>
-                        I proposed a new artitecture and lead development of Prime Video website's rendering framework.
+                        I proposed a new architecture and lead development of Prime Video website's rendering framework.
                         The new design aimed to unify a fragmented code base.
                     </p>
                     <p>
@@ -90,7 +89,7 @@ export default function Experience() {
                     </p>
                     <p>
                         When I first joined the Prime Video website team, all our selenium integration testing was written in a Java framework using <a href={testNG.href}>TestNG</a>.
-                        None of the website was written in Java, so this was an additional burden to learn, and was a obsticle for developers to thoroughly test their features.
+                        None of the website was written in Java, so this was an additional burden to learn, and was a obstacle for developers to thoroughly test their features.
                     </p>
                     <p>
                         After developers expressed an interest in writing these integration tests in JavaScript, I prototyped multiple Node.JS based selenium frameworks and presented each the team.
@@ -103,10 +102,10 @@ export default function Experience() {
                         (Thanks Jeff Bezos!)
                     </p>
                     <p>
-                        This went down so well with platform team that we turned these into a regular occurence and got the wider web team to participate.
+                        This went down so well with platform team that we turned these into a regular occurrence and got the wider web team to participate.
                     </p>
                     <p>
-                        These game nights are still going strong, and I stil get a +1 invite.
+                        These game nights are still going strong, and I still get a +1 invite.
                     </p>
                 </>
             }
