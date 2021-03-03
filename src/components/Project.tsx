@@ -2,6 +2,13 @@ import * as React from 'react';
 import * as s from './Project.module.scss';
 import { Link } from '../util/types';
 
+// Lazy loading not implemented across browsers, so not yet in @types/react
+declare module "react" {
+    interface ImgHTMLAttributes<T> extends HTMLAttributes<T> {
+        loading?: "auto" | "eager" | "lazy";
+    }
+}
+
 export interface ProjectProps {
     title: string,
     tagline?: React.ReactChild;
@@ -40,7 +47,7 @@ export default function Project(p: ProjectProps) {
             <div className={s.container}>
                 <div className={s.flex}>
                     <div className={s.description}>{p.description || <p>{lorem}</p>}</div>
-                    {p.images && <div className={s.images}>{p.images.map((imgSrc, i) => <div className={`image${i}`} key={imgSrc}><img src={imgSrc} /></div>)}</div>}
+                    {p.images && <div className={s.images}>{p.images.map((imgSrc, i) => <div className={`image${i}`} key={imgSrc}><img src={imgSrc} loading="lazy" /></div>)}</div>}
                 </div>
                 <div className={s.frame3d}>
                     {p.frame}
