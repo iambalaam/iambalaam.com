@@ -19,7 +19,7 @@ const handleEvent = async (event: FetchEvent) => {
         );
         return new Response(htmlDocument({
             title: 'iambalaam.com',
-            desc: 'The newest and greatest site on the web!',
+            desc: 'Guy Balaam: Software Developer;',
             content
         }), { status: context.statusCode || 200, headers: { 'content-type': 'text/html; charset=UTF-8' } });
     } catch (error) {
