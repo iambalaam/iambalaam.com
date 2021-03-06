@@ -36,23 +36,23 @@ export default function Projects() {
                 title="Rewired"
                 id="rewired"
                 href={rewiredItch.href}
-                tagline={<>GMTK GameJam 2020: <br className={s.softbreak} />"Out Of Control"</>}
+                tagline={<>GMTK GameJam 2020: <br className={s.softbreak} />"Out of Control"</>}
                 techUsed={[unity, rewiredItch]}
                 frame={<RewiredBot />}
                 images={[RewiredLogo, RewiredFallOff]}
                 description={<>
                     <p>
-                        In the GMTK GameJam 2020 we were given 48 hours to create a game given the brief "<em>Out of Control</em>".
-                        I teamed up with a 3D artist to make a our game - all the amazing modelling and texturing is their work, all the game logic and programming is mine.
-                        We came up with a fighting game that lets you interfere with your opponents input, leaving them <em>Out Of Control</em>.
+                        I teamed up with <a href="https://arnovanavermaet.artstation.com/">Arno Van Avermaet</a>, a 3D artist for the GMTK 2020 Game Jam - all the amazing modelling and texturing is his work, all the game logic and programming is mine.
+                        We were given 48 hours to make a game fitting the brief '<em>Out of Control</em>'.
+                        We came up with a fighting game that lets you interfere with your opponents input, leaving them <em>Out of Control</em>.
                     </p>
                     <p>
-                        Instead of getting straight to programming, we tested our idea to see if it was as fun as we'd thought.
-                        We played fighting games we already owned and changed each others controls to make it as hard as possible.
+                        Before getting to programming, we first tested our idea to see if it was as fun as we had thought.
+                        We played fighting games that we already owned and changed each other's controls to make it as hard as possible.
                         The hook of the game became obvious - changing your opponent's controls just as they learnt to use the previous ones.
                     </p>
                     <p>
-                        In the gif you can see the blue player flips forwards/backwards for the orange player.
+                        In the gif you can see the blue player flips the orange player's forward/backward controls.
                     </p>
                     <p>
                         I implemented a dynamic control system that allows remapping at runtime.
@@ -77,8 +77,8 @@ export default function Projects() {
                         I wanted to make a game with <em>Only One</em> input, so it could be played by anyone with a mouse or touch device.
                     </p>
                     <p>
-                        I decided to create an online multiplayer game as before this I had only made single player games.
-                        As it was my first game jam, and I only had 2 days, I stuck to what I knew and designed it to work in the browser.
+                        This was my first game jam, and my first attempt at making an online multiplayer game.
+                        With only 48 hours I stuck to what I knew and designed it to work in the browser.
                         I learnt to use websockets between players, wrote a simple physics engine and used <a href={p5js.href}>{p5js.text}</a> to render the canvas.
                     </p>
                     <p>
@@ -100,15 +100,15 @@ export default function Projects() {
                     <p>
                         Drawing anything in the browser that isn't a circle or a rectangle normally relies on rendering pixels on a bitmap canvas.
                         This approach is boring.
-                        I set out to challenge these norms and to make a drawing application without using a canvas.
+                        So I my drawing application unique by not using a canvas.
                     </p>
                     <p>
-                        I made a <a href="https://codepen.io/iambalaam/pen/vzzjVg">proof of concept</a> drawing a line between two points by positioning DOM elements.
+                        As a <a href="https://codepen.io/iambalaam/pen/vzzjVg">proof of concept</a>, I drew a line between two points by positioning DOM elements.
                         Then, I used this to make vector art with hundreds, or thousands, of these line segments.
                     </p>
                     <p>
-                        I previously thought that adding this many elements to the DOM in real time would crash the browser.
-                        To my surprise it performed perfectly smoothly and challenged assumptions I had about web development.
+                        I previously assumed that adding this many elements to the DOM in real time would crash the browser.
+                        To my surprise it performed perfectly smoothly, challenging assumptions I had about web development.
                     </p>
                 </>}
             />
@@ -120,12 +120,12 @@ export default function Projects() {
                 frame={<WebsiteOutside />}
                 description={<>
                     <p>
-                        I wrote and published my first open source npm module <a href={dae2css.href}><code>dae2css</code></a> that renders 3D models as individual DOM elements.
+                        I wrote and published my first open source npm module <a href={dae2css.href}><code>dae2css</code></a>, which renders 3D models as individual DOM elements.
                         You can highlight the elements by hovering over models, or tapping on them with touch devices.
                     </p>
                     <p>
                         Following my 2D vector art with <a href="#photoshop-js">photoshop-js</a>, I wanted to test how well the browser would render 3D models using CSS and DOM elements.
-                        At the same time I was practising low-poly modelling in blender to help speed up creation of game prototypes in Unity and I realised I could showcase these on this website.
+                        At the same time I was practising low-poly modelling in blender to help speed up creation of game prototypes in Unity, so I showcased some of these on this website.
                     </p>
                     <p>
 
@@ -143,14 +143,14 @@ export default function Projects() {
                 description={<>
                     <p>
                         I wanted to serve this website in a unique way, with a few moving parts as possible.
-                        After attending <a href="https://2019.jsconf.eu/ashley-williams/javascripts-journey-to-the-edge.html">a talk by Ashley Williams at JS Conf EU 2019</a>, I wanted to try out Cloudflare Workers.
                     </p>
                     <p>
+                        After attending <a href="https://2019.jsconf.eu/ashley-williams/javascripts-journey-to-the-edge.html">a talk by Ashley Williams at JS Conf EU 2019</a>, I decided to try out Cloudflare Workers.
                         This architecture would allow me to forget about a fleet of servers to host the website, and where continuous integration or file hosting would take place.
-                        I wanted to make a proof of concept (if you're reading this - it worked!).
+                        I made a proof of concept (if you're reading this - it worked!).
                     </p>
                     <p>
-                        Github Actions handle testing, building and deploying my code.  It also <a href="https://github.com/iambalaam/iambalaam.com/commits/dist">commits my build artifacts</a> to serve as free file hosting.
+                        Github Actions handles testing, building and deploying my code.  It also <a href="https://github.com/iambalaam/iambalaam.com/commits/dist">commits my build artifacts</a> to serve as free file hosting.
                     </p>
                     <p>
                         Cloudflare Workers serverside render the website to improve page performance, and also act as a CDN for static assets.

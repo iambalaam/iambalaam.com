@@ -29,7 +29,7 @@ export default function Experience() {
                         The platform team supported other teams creating features for the Prime Video website.
                         We focused on:
                         <ul>
-                            <li>Creating tooling and automation to reduce pain for developers</li>
+                            <li>Creating tooling and automation to speed up development</li>
                             <li>Improving the website's resilience against outages</li>
                             <li>Investigating and prototyping complex technical challenges</li>
                         </ul>
@@ -38,26 +38,26 @@ export default function Experience() {
 
                     <h3>Rendering Framework</h3>
                     <p>
-                        Rendering is getting all the elements in a webpage ready.
+                        Rendering is getting all the elements in a webpage ready to display.
                         Clientside rendering (CSR) is creating all the elements needed in the page and drawing them to the screen.
-                        Serverside rendering (SSR) is generating a string of html to send to the customer and can be vital for performance.
+                        Serverside rendering (SSR) is generating a string of html to send to the customer, and this can be vital for performance.
                         {/* Google have written a great summary of <a href="https://developers.google.com/web/updates/2019/02/rendering-on-the-web">rendering on the web</a>. */}
                     </p>
                     <p>
-                        I proposed a new architecture and lead development of Prime Video website's rendering framework.
-                        The new design aimed to unify a fragmented code base.
+                        I proposed a new architecture and led development of Prime Video website's rendering framework.
                     </p>
                     <p>
+                        The new design aimed to unify a fragmented code base.
                         It allowed feature developers to write in a single code base that runs on the client and the server.
                         We could now profile our code and our builds, finding bottle-necks for our customers and our developers.
-                        One investigation found we could drastically reduce the CSS sent to customers, reducing the size by 47%.
+                        This drastically reduced the CSS sent to customers, reducing the size by 47%.
                         Another optimisation from this approach reduced build times for our code from 45 minutes to 10.
                     </p>
                     <p>
                         I also worked to provide a range of in-built tooling, most notably:
                     <ul>
                             <li>
-                                <a href="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement">Progressive enhancement</a> and <a href="https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation">graceful degredation</a>.
+                                <a href="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement">Progressive enhancement</a> and <a href="https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation">graceful degradation</a>.
                                 All pages are serverside rendered and are fully functional without JavaScript (<em>just like this site</em>).
                             </li>
                             <li>
@@ -81,35 +81,37 @@ export default function Experience() {
                     </p>
                     <p>
                         I learnt a lot from the research involved in creating these sessions, and discovered some XSS vulnerabilities in the live website.
-                        The workshop Prime Video InfoSec team took these workshops to the Amazon internal security conference.
+                        The Prime Video InfoSec team took these workshops to the Amazon internal security conference.
                     </p>
 
                     <hr />
 
                     <h3>Integration Testing</h3>
                     <p>
-                        Selenium is a tool that allows us to run integration testing on websites by controlling a real browser.
-                        This allows our testing methods to be as close to how a customer would use our website as possible.
+                        Selenium is a tool that runs integration testing on websites by controlling a real browser.
+                        This allows our testing methods to be as close as possible to how a customer would use the website.
                     </p>
                     <p>
-                        When I first joined the Prime Video website team, all our selenium integration testing was written in a Java framework using <a href={testNG.href}>TestNG</a>.
-                        None of the website was written in Java, so this was an additional burden to learn, and was a obstacle for developers to thoroughly test their features.
+                        When I first joined the Prime Video website team, all of our selenium integration testing was written in a Java framework using <a href={testNG.href}>TestNG</a>.
+                        None of the website was written in Java.
+                        The need to learn an additional language was an unnecessary burden for developers when testing their features.
                     </p>
                     <p>
-                        After developers expressed an interest in writing these integration tests in JavaScript, I prototyped multiple Node.JS based selenium frameworks and presented each the team.
+                        After developers expressed an interest in writing these integration tests in JavaScript, I prototyped multiple Node.JS based selenium frameworks and presented each to the team.
                     </p>
                     <hr />
 
                     <h3>Game Nights</h3>
                     <p>
-                        To organise a social event for the team, I sought to expense a copy of <a href="https://store.steampowered.com/app/4000/Garrys_Mod/">Garry's Mod</a> for every member of the platform team.
-                        (Thanks Jeff Bezos!)
+                        I organised a set of social events to share my love of gaming with the Platform team, many of whom didn't game at all.
+                        I picked 'Murder' and 'TTT' game modes from <a href="https://store.steampowered.com/app/4000/Garrys_Mod/">Garry's Mod</a> as well as <a href="https://store.steampowered.com/app/945360/Among_Us/">Among Us</a> as these social deduction games rely heavily on social interaction and teamwork.
+                        Newer players ended up winning through deception and bluffing instead of mechanical skill.
                     </p>
                     <p>
-                        This went down so well with platform team that we turned these into a regular occurrence and got the wider web team to participate.
+                        These events grew to include the wider Web team - working from home in lockdown in 2020 made these even more important for team cohesion.
                     </p>
                     <p>
-                        These game nights are still going strong, and I still get a +1 invite.
+                        These game nights have been running weekly for over a year and despite having left the team, I still get an invite.
                     </p>
                 </>
             }
