@@ -57,7 +57,7 @@ export default function Experience() {
                         I also worked to provide a range of in-built tooling, most notably:
                     <ul>
                             <li>
-                                <a href="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement">Progressive enhancement</a> and <a href="https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation">graceful degradation</a>.
+                                <a href="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement" target="_blank">Progressive enhancement</a> and <a href="https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation" target="_blank">graceful degradation</a>.
                                 All pages are serverside rendered and are fully functional without JavaScript (<em>just like this site</em>).
                             </li>
                             <li>
@@ -104,7 +104,7 @@ export default function Experience() {
                     <h3>Game Nights</h3>
                     <p>
                         I organised a set of social events to share my love of gaming with the Platform team, many of whom didn't game at all.
-                        I picked 'Murder' and 'TTT' game modes from <a href="https://store.steampowered.com/app/4000/Garrys_Mod/">Garry's Mod</a> as well as <a href="https://store.steampowered.com/app/945360/Among_Us/">Among Us</a> as these social deduction games rely heavily on social interaction and teamwork.
+                        I picked 'Murder' and 'TTT' game modes from <a href="https://store.steampowered.com/app/4000/Garrys_Mod/" target="_blank">Garry's Mod</a> as well as <a href="https://store.steampowered.com/app/945360/Among_Us/" target="_blank">Among Us</a> as these social deduction games rely heavily on social interaction and teamwork.
                         Newer players ended up winning through deception and bluffing instead of mechanical skill.
                     </p>
                     <p>

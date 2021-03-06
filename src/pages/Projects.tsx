@@ -42,7 +42,7 @@ export default function Projects() {
                 images={[RewiredLogo, RewiredFallOff]}
                 description={<>
                     <p>
-                        I teamed up with <a href="https://arnovanavermaet.artstation.com/">Arno Van Avermaet</a>, a 3D artist for the GMTK 2020 Game Jam - all the amazing modelling and texturing is his work, all the game logic and programming is mine.
+                        I teamed up with <a href="https://arnovanavermaet.artstation.com/" target="_blank">Arno Van Avermaet</a>, a 3D artist for the GMTK 2020 Game Jam - all the amazing modelling and texturing is his work, all the game logic and programming is mine.
                         We were given 48 hours to make a game fitting the brief '<em>Out of Control</em>'.
                         We came up with a fighting game that lets you interfere with your opponents input, leaving them <em>Out of Control</em>.
                     </p>
@@ -59,7 +59,7 @@ export default function Projects() {
                         When a player collects a modifier, another mapping is added to their opponent (who might already have many mappings applied).
                     </p>
                     <p>
-                        <a href="https://www.youtube.com/c/DotSlashFrag">DotSlashFrag</a> found our game on Itch independently of the jam and <a href="https://www.youtube.com/watch?v=Xq9xE4kE8xQ">reviewed it in a <em>let's play</em></a>.
+                        <a href="https://www.youtube.com/c/DotSlashFrag" target="_blank">DotSlashFrag</a> found our game on Itch independently of the jam and <a href="https://www.youtube.com/watch?v=Xq9xE4kE8xQ" target="_blank">reviewed it in a <em>let's play</em></a>.
                     </p>
                 </>}
             />
@@ -79,13 +79,13 @@ export default function Projects() {
                     <p>
                         This was my first game jam, and my first attempt at making an online multiplayer game.
                         With only 48 hours I stuck to what I knew and designed it to work in the browser.
-                        I learnt to use websockets between players, wrote a simple physics engine and used <a href={p5js.href}>{p5js.text}</a> to render the canvas.
+                        I learnt to use websockets between players, wrote a simple physics engine and used <a href={p5js.href} target="_blank">{p5js.text}</a> to render the canvas.
                     </p>
                     <p>
                         I designed the game to reward an aggressive playstyle, so the players sword gets longer the faster they are travelling, encouraging aerial combat.
                     </p>
                     <p>
-                        I took inspiration from <a href="https://www.youtube.com/watch?v=sQwBuaik9lA">Super Pole Riders</a> for the pole vault mechanics.
+                        I took inspiration from <a href="https://www.youtube.com/watch?v=sQwBuaik9lA" target="_blank">Super Pole Riders</a> for the pole vault mechanics.
                     </p>
                 </>}
             />
@@ -103,7 +103,7 @@ export default function Projects() {
                         So I my drawing application unique by not using a canvas.
                     </p>
                     <p>
-                        As a <a href="https://codepen.io/iambalaam/pen/vzzjVg">proof of concept</a>, I drew a line between two points by positioning DOM elements.
+                        As a <a href="https://codepen.io/iambalaam/pen/vzzjVg" target="_blank">proof of concept</a>, I drew a line between two points by positioning DOM elements.
                         Then, I used this to make vector art with hundreds, or thousands, of these line segments.
                     </p>
                     <p>
@@ -120,7 +120,7 @@ export default function Projects() {
                 frame={<WebsiteOutside />}
                 description={<>
                     <p>
-                        I wrote and published my first open source npm module <a href={dae2css.href}><code>dae2css</code></a>, which renders 3D models as individual DOM elements.
+                        I wrote and published my first open source npm module <a href={dae2css.href} target="_blank"><code>dae2css</code></a>, which renders 3D models as individual DOM elements.
                         You can highlight the elements by hovering over models, or tapping on them with touch devices.
                     </p>
                     <p>
@@ -145,12 +145,12 @@ export default function Projects() {
                         I wanted to serve this website in a unique way, with a few moving parts as possible.
                     </p>
                     <p>
-                        After attending <a href="https://2019.jsconf.eu/ashley-williams/javascripts-journey-to-the-edge.html">a talk by Ashley Williams at JS Conf EU 2019</a>, I decided to try out Cloudflare Workers.
+                        After attending <a href="https://2019.jsconf.eu/ashley-williams/javascripts-journey-to-the-edge.html" target="_blank">a talk by Ashley Williams at JS Conf EU 2019</a>, I decided to try out Cloudflare Workers.
                         This architecture would allow me to forget about a fleet of servers to host the website, and where continuous integration or file hosting would take place.
                         I made a proof of concept (if you're reading this - it worked!).
                     </p>
                     <p>
-                        Github Actions handles testing, building and deploying my code.  It also <a href="https://github.com/iambalaam/iambalaam.com/commits/dist">commits my build artifacts</a> to serve as free file hosting.
+                        Github Actions handles testing, building and deploying my code.  It also <a href="https://github.com/iambalaam/iambalaam.com/commits/dist" target="_blank">commits my build artifacts</a> to serve as free file hosting.
                     </p>
                     <p>
                         Cloudflare Workers serverside render the website to improve page performance, and also act as a CDN for static assets.

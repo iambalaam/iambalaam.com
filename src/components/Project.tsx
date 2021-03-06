@@ -25,7 +25,7 @@ const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
 export default function Project(p: ProjectProps) {
     const header = p.href
         ? (
-            <a href={p.href}>
+            <a href={p.href} target="_blank">
                 <h2 className={s.title}>{p.title}</h2>
                 {p.tagline && <h3 className={s.tagline}>{p.tagline}</h3>}
             </a>
