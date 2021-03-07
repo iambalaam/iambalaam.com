@@ -42,9 +42,9 @@ export default function Projects() {
                 images={[RewiredLogo, RewiredFallOff]}
                 description={<>
                     <p>
-                        I teamed up with <a href="https://arnovanavermaet.artstation.com/" target="_blank">Arno Van Avermaet</a>, a 3D artist for the GMTK 2020 Game Jam - all the amazing modelling and texturing is his work, all the game logic and programming is mine.
+                        I teamed up with <a href="https://arnovanavermaet.artstation.com/" target="_blank">Arno Van Avermaet</a>, a 3D artist, for the GMTK 2020 Game Jam - all the amazing modelling and texturing is his work, all the game logic and programming is mine.
                         We were given 48 hours to make a game fitting the brief '<em>Out of Control</em>'.
-                        We came up with a fighting game that lets you interfere with your opponents input, leaving them <em>Out of Control</em>.
+                        We came up with a fighting game that lets you interfere with your opponent's input, leaving them <em>Out of Control</em>.
                     </p>
                     <p>
                         Before getting to programming, we first tested our idea to see if it was as fun as we had thought.
@@ -59,7 +59,7 @@ export default function Projects() {
                         When a player collects a modifier, another mapping is added to their opponent (who might already have many mappings applied).
                     </p>
                     <p>
-                        <a href="https://www.youtube.com/c/DotSlashFrag" target="_blank">DotSlashFrag</a> found our game on Itch independently of the jam and <a href="https://www.youtube.com/watch?v=Xq9xE4kE8xQ" target="_blank">reviewed it in a <em>let's play</em></a>.
+                        <a href="https://www.youtube.com/c/DotSlashFrag" target="_blank">DotSlashFrag</a> found our game on Itch independently of the jam and <a href="https://www.youtube.com/watch?v=Xq9xE4kE8xQ" target="_blank">reviewed it in a <em>Let's Play</em></a>.
                     </p>
                 </>}
             />
@@ -82,7 +82,7 @@ export default function Projects() {
                         I learnt to use websockets between players, wrote a simple physics engine and used <a href={p5js.href} target="_blank">{p5js.text}</a> to render the canvas.
                     </p>
                     <p>
-                        I designed the game to reward an aggressive playstyle, so the players sword gets longer the faster they are travelling, encouraging aerial combat.
+                        I designed the game to reward an aggressive playstyle, so the player's sword gets longer the faster they are travelling, encouraging aerial combat.
                     </p>
                     <p>
                         I took inspiration from <a href="https://www.youtube.com/watch?v=sQwBuaik9lA" target="_blank">Super Pole Riders</a> for the pole vault mechanics.
@@ -100,15 +100,15 @@ export default function Projects() {
                     <p>
                         Drawing anything in the browser that isn't a circle or a rectangle normally relies on rendering pixels on a bitmap canvas.
                         This approach is boring.
-                        So I my drawing application unique by not using a canvas.
+                        So I made my drawing application unique by not using a canvas.
                     </p>
                     <p>
                         As a <a href="https://codepen.io/iambalaam/pen/vzzjVg" target="_blank">proof of concept</a>, I drew a line between two points by positioning DOM elements.
                         Then, I used this to make vector art with hundreds, or thousands, of these line segments.
                     </p>
                     <p>
-                        I previously assumed that adding this many elements to the DOM in real time would crash the browser.
-                        To my surprise it performed perfectly smoothly, challenging assumptions I had about web development.
+                        I had previously assumed that adding this many elements to the DOM in real time would crash the browser.
+                        To my surprise, it performed perfectly smoothly, challenging assumptions I had about web development.
                     </p>
                 </>}
             />
@@ -125,7 +125,7 @@ export default function Projects() {
                     </p>
                     <p>
                         Following my 2D vector art with <a href="#photoshop-js">photoshop-js</a>, I wanted to test how well the browser would render 3D models using CSS and DOM elements.
-                        At the same time I was practising low-poly modelling in blender to help speed up creation of game prototypes in Unity, so I showcased some of these on this website.
+                        At the same time, I was practising low-poly modelling in Blender to help speed up creation of game prototypes in Unity, so I showcased some of these on this website.
                     </p>
                     <p>
 
@@ -142,7 +142,7 @@ export default function Projects() {
                 images={[Cloudflare, GithubActions]}
                 description={<>
                     <p>
-                        I wanted to serve this website in a unique way, with a few moving parts as possible.
+                        I wanted to serve this website in a unique way, with as few moving parts as possible.
                     </p>
                     <p>
                         After attending <a href="https://2019.jsconf.eu/ashley-williams/javascripts-journey-to-the-edge.html" target="_blank">a talk by Ashley Williams at JS Conf EU 2019</a>, I decided to try out Cloudflare Workers.
@@ -153,7 +153,7 @@ export default function Projects() {
                         Github Actions handles testing, building and deploying my code.  It also <a href="https://github.com/iambalaam/iambalaam.com/commits/dist" target="_blank">commits my build artifacts</a> to serve as free file hosting.
                     </p>
                     <p>
-                        Cloudflare Workers serverside render the website to improve page performance, and also act as a CDN for static assets.
+                        Cloudflare Workers serverside renders the website to improve page performance, and also act as a CDN for static assets.
                     </p>
                 </>}
             />

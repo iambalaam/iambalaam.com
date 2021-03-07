@@ -48,7 +48,7 @@ export default function Experience() {
                     </p>
                     <p>
                         The new design aimed to unify a fragmented code base.
-                        It allowed feature developers to write in a single code base that runs on the client and the server.
+                        It allowed feature developers to write in a single code base that runs on both the client and the server.
                         We could now profile our code and our builds, finding bottle-necks for our customers and our developers.
                         This drastically reduced the CSS sent to customers, reducing the size by 47%.
                         Another optimisation from this approach reduced build times for our code from 45 minutes to 10.
@@ -81,7 +81,7 @@ export default function Experience() {
                     </p>
                     <p>
                         I learnt a lot from the research involved in creating these sessions, and discovered some XSS vulnerabilities in the live website.
-                        The Prime Video InfoSec team took these workshops to the Amazon internal security conference.
+                        The Prime Video InfoSec team took these training sessions to the Amazon internal security conference.
                     </p>
 
                     <hr />
@@ -92,7 +92,7 @@ export default function Experience() {
                         This allows our testing methods to be as close as possible to how a customer would use the website.
                     </p>
                     <p>
-                        When I first joined the Prime Video website team, all of our selenium integration testing was written in a Java framework using <a href={testNG.href}>TestNG</a>.
+                        When I first joined the Prime Video website team, all of our Selenium integration testing was written in a Java framework using <a href={testNG.href}>TestNG</a>.
                         None of the website was written in Java.
                         The need to learn an additional language was an unnecessary burden for developers when testing their features.
                     </p>
