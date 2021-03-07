@@ -97,18 +97,18 @@ export default function Experience() {
                         The need to learn an additional language was an unnecessary burden for developers when testing their features.
                     </p>
                     <p>
-                        After developers expressed an interest in writing these integration tests in JavaScript, I prototyped multiple Node.JS based selenium frameworks and presented each to the team.
+                        After developers expressed an interest in writing these integration tests in JavaScript, I prototyped multiple Node.JS based Selenium frameworks and presented each to the team.
                     </p>
                     <hr />
 
                     <h3>Game Nights</h3>
                     <p>
                         I organised a set of social events to share my love of gaming with the Platform team, many of whom didn't game at all.
-                        I picked 'Murder' and 'TTT' game modes from <a href="https://store.steampowered.com/app/4000/Garrys_Mod/" target="_blank">Garry's Mod</a> as well as <a href="https://store.steampowered.com/app/945360/Among_Us/" target="_blank">Among Us</a> as these social deduction games rely heavily on social interaction and teamwork.
+                        I picked <em>Murder</em> and <em>TTT</em> game modes from <a href="https://store.steampowered.com/app/4000/Garrys_Mod/" target="_blank">Garry's Mod</a> as well as <a href="https://store.steampowered.com/app/945360/Among_Us/" target="_blank">Among Us</a> as these social deduction games rely heavily on social interaction and teamwork.
                         Newer players ended up winning through deception and bluffing instead of mechanical skill.
                     </p>
                     <p>
-                        These events grew to include the wider Web team - working from home in lockdown in 2020 made these even more important for team cohesion.
+                        These events grew to include the wider Web team and working from home in lockdown in 2020 made these even more important for team cohesion.
                     </p>
                     <p>
                         These game nights have been running weekly for over a year and despite having left the team, I still get an invite.
