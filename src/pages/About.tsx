@@ -15,14 +15,10 @@ export default function About() {
                     Hi, I'm Guy.
                 </p>
                 <p>
-                    I'm a software developer with 4 years experience.
-                    I have a first class Mathematics degree and I get a thrill out of geometry.
+                    I'm a software developer with 4 years experience, and also an avid Mathematician with a first class degree.
                 </p>
                 <p>
-                    I like playing games.
-                </p>
-                <p>
-                    I also like skateboarding a lot.
+                    I love playing games and I skateboard a lot.
                 </p>
             </>}
         />
