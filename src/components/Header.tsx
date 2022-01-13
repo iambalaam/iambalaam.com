@@ -20,7 +20,7 @@ export default function Header() {
                 </span>
             </div>
             <nav>{
-                ['About', 'Projects', 'Experience', 'Contact'].map((Route) => {
+                ['About', 'Experience', 'Projects', 'Contact'].map((Route) => {
                     const route = Route.toLowerCase();
                     const target = '/' + route;
                     return (path === target)
