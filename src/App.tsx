@@ -16,8 +16,8 @@ const App = () =>
             <Switch>
                 <Redirect exact path="/" to="/about" />
                 <Route exact path='/about' component={About} />
-                <Route exact path='/projects' component={Projects} />
                 <Route exact path='/experience' component={Experience} />
+                <Route exact path='/projects' component={Projects} />
                 <Route exact path='/contact' component={Contact} />
                 <Route render={(routeProps) => (<NotFound {...routeProps} />)} />
             </Switch>

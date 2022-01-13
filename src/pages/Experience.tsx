@@ -30,8 +30,8 @@ export default function Experience() {
                         We focused on:
                         <ul>
                             <li>Creating tooling and automation to speed up development</li>
-                            <li>Improving the website's resilience against outages</li>
                             <li>Investigating and prototyping complex technical challenges</li>
+                            <li>Improving the website's resilience against outages</li>
                         </ul>
                     </p>
                     <hr />
@@ -50,12 +50,12 @@ export default function Experience() {
                         The new design aimed to unify a fragmented code base.
                         It allowed feature developers to write in a single code base that runs on both the client and the server.
                         We could now profile our code and our builds, finding bottle-necks for our customers and our developers.
-                        This drastically reduced the CSS sent to customers, reducing the size by 47%.
+                        This allowed drastic reduction of the CSS sent to customers, shrinking the size by 47%.
                         Another optimisation from this approach reduced build times for our code from 45 minutes to 10.
                     </p>
                     <p>
                         I also worked to provide a range of in-built tooling, most notably:
-                    <ul>
+                        <ul>
                             <li>
                                 <a href="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement" target="_blank">Progressive enhancement</a> and <a href="https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation" target="_blank">graceful degradation</a>.
                                 All pages are serverside rendered and are fully functional without JavaScript (<em>just like this site</em>).
