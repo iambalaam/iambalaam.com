@@ -38,9 +38,9 @@ export default function Experience() {
 
                     <h3>Rendering Framework</h3>
                     <p>
-                        Rendering is getting all the elements in a webpage ready to display.
-                        Clientside rendering (CSR) is creating all the elements needed in the page and drawing them to the screen.
-                        Serverside rendering (SSR) is generating a string of html to send to the customer, and this can be vital for performance.
+                        Rendering is getting all the elements in a webpage ready to be drawn onto the screen.
+                        I proposed a new architecture and led development of Prime Video website's rendering framework.
+
                         {/* Google have written a great summary of <a href="https://developers.google.com/web/updates/2019/02/rendering-on-the-web">rendering on the web</a>. */}
                     </p>
                     <p>
@@ -54,7 +54,7 @@ export default function Experience() {
                         Another optimisation from this approach reduced build times for our code from 45 minutes to 10.
                     </p>
                     <p>
-                        I also worked to provide a range of in-built tooling, most notably:
+                        I also worked to provide a range of tooling built into the new architecture, most notably:
                         <ul>
                             <li>
                                 <a href="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement" target="_blank">Progressive enhancement</a> and <a href="https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation" target="_blank">graceful degradation</a>.
@@ -72,7 +72,11 @@ export default function Experience() {
 
                     <h3>Security Training</h3>
                     <p>
-                        I worked with the Prime Video InfoSec team to create a series of security training sessions focused on cross site scripting (XSS).
+                        {/* 
+                            After working on some security-critical issues, I had spent a lot of time researching.
+                            I then worked with the Prime Video InfoSec team to share this knowledge with a series of web security training sessions focussed on cross site scripting (XSS).
+                        */}
+                        I worked with the Prime Video InfoSec team to create a series of web security training sessions focused on cross site scripting (XSS).
                         These took the form of interactive, hands-on workshop sessions for the whole team.
                     </p>
                     <p>
@@ -93,8 +97,8 @@ export default function Experience() {
                     </p>
                     <p>
                         When I first joined the Prime Video website team, all of our Selenium integration testing was written in a Java framework using <a href={testNG.href}>TestNG</a>.
-                        None of the website was written in Java.
-                        The need to learn an additional language was an unnecessary burden for developers when testing their features.
+
+                        As none of the website was written in Java, developers needed to learn an additional language to be able to properly test their features - an unneccessary burden.
                     </p>
                     <p>
                         After developers expressed an interest in writing these integration tests in JavaScript, I prototyped multiple Node.JS based Selenium frameworks and presented each to the team.
