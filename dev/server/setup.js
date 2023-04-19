@@ -9,7 +9,7 @@ global.BUILD_COMMIT = 'dist';
 // .module.scss mocking
 require.extensions['.scss'] = (module, filename) => {
     const src = readFileSync(filename).toString();
-    const js = process(src, filename, { rootDir: ROOT_DIR })
+    const js = process(src, filename, { rootDir: ROOT_DIR }).code;
     module._compile(js, filename);
 }
 

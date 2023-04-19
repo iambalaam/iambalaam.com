@@ -32,7 +32,7 @@ server.get('*', (request, response) => {
             desc: 'Uh oh - something broke',
             content: process.env.NODE_ENV === 'production'
                 ? '<h1>Uh oh</h1><p>Something broke, <a href="/">go back</a>?</p>'
-                : `<pre>${error.stack || error}</pre>`
+                : `<pre>${(error as Error).stack || error}</pre>`
         }))
     }
 });
