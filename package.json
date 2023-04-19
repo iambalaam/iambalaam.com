@@ -7,7 +7,7 @@
     "scripts": {
         "test": "echo \"no unit tests\"",
         "start": "cross-env NODE_ENV=development run-p start:server",
-        "start:server": "nodemon -x ts-node --require ./dev/server/setup.js dev/server/dev-server.tsx",
+        "start:server": "nodemon -x \"npx ts-node --require ./dev/server/setup.js dev/server/dev-server.tsx\"",
         "build": "cross-env NODE_ENV=production run-s clean generate-models copy-static webpack",
         "clean": "rimraf dist && mkdirp dist",
         "generate-models": "ts-node scripts/generate-models.ts",
@@ -16,6 +16,9 @@
         "webpack:server": "webpack --config webpack.server.config.js",
         "webpack:client": "webpack --config webpack.client.config.js",
         "watch-assets": "webpack --config webpack.client.config.js --watch"
+    },
+    "engines": {
+        "node": "^16"
     },
     "devDependencies": {
         "@cloudflare/wrangler": "^1.1.1",
@@ -33,7 +36,6 @@
         "jest-css-modules-transform": "^3.1.0",
         "mini-css-extract-plugin": "^0.8.0",
         "mkdirp": "^1.0.4",
-        "node-sass": "^4.13.1",
         "nodemon": "^1.19.3",
         "npm-run-all": "^4.1.5",
         "postcss-loader": "^4.2.0",
@@ -42,6 +44,7 @@
         "react-dom": "^16.9.0",
         "react-router-dom": "^5.1.0",
         "rimraf": "^3.0.2",
+        "sass": "^1.62.0",
         "sass-loader": "10",
         "ts-loader": "^6.0.4",
         "ts-node": "^8.4.1",
