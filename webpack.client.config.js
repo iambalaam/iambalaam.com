@@ -1,6 +1,6 @@
 const { resolve } = require('path');
-const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const BUILD_COMMIT = process.env.BUILD_COMMIT || 'dist';
 
@@ -53,6 +53,11 @@ module.exports = {
         ]
     },
     plugins: [
-        new MiniCssExtractPlugin({ filename: '[name].css' })
+        new MiniCssExtractPlugin({ filename: '[name].css' }),
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'static',
+            reportFilename: 'bundle-analyzer.html',
+            openAnalyzer: false
+        }),
     ]
 }
