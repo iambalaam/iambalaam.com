@@ -1,7 +1,7 @@
-@import '../util/colors.module.scss';
+@use '../util/colors.scss';
 
 // Enable backface culling
-:global(.triangle) {
+.triangle {
     backface-visibility: hidden;
 }
 
@@ -30,51 +30,51 @@
 }
 
 // Rewired Bot Colors
-:global(.triangle.rewired-antenna) { border-bottom-color: grey; }
-:global(.triangle.rewired-body) { border-bottom-color: lightgrey; }
-:global(.triangle.rewired-tops) { border-bottom-color: rgb(17, 135, 231); }
-:global(.triangle.rewired-sides) { border-bottom-color: rgb(10, 96, 167); }
-:global(.triangle.rewired-bottoms) { border-bottom-color: rgb(6, 70, 122); }
-:global(.triangle.rewired-eye) { border-bottom-color: grey; }
-:global(.triangle.rewired-lens) { border-bottom-color: dimgrey; }
+.triangle.rewired-antenna { border-bottom-color: grey; }
+.triangle.rewired-body { border-bottom-color: lightgrey; }
+.triangle.rewired-tops { border-bottom-color: rgb(17, 135, 231); }
+.triangle.rewired-sides { border-bottom-color: rgb(10, 96, 167); }
+.triangle.rewired-bottoms { border-bottom-color: rgb(6, 70, 122); }
+.triangle.rewired-eye { border-bottom-color: grey; }
+.triangle.rewired-lens { border-bottom-color: dimgrey; }
 
 // Pencil Colors
-:global(.triangle.pencil-lead) {border-bottom-color: rgb(85, 85, 85);}
-:global(.triangle.pencil-wood) {border-bottom-color: rgb(231, 179, 129);}
-:global(.triangle.pencil-black) {border-bottom-color: rgb(54, 54, 54);}
-:global(.triangle.pencil-yellow) {border-bottom-color: rgb(223, 223, 90);}
-:global(.triangle.pencil-metal) {border-bottom-color: lightgray;}
-:global(.triangle.pencil-rubber) {border-bottom-color: rgb(228, 116, 116);}
+.triangle.pencil-lead {border-bottom-color: rgb(85, 85, 85);}
+.triangle.pencil-wood {border-bottom-color: rgb(231, 179, 129);}
+.triangle.pencil-black {border-bottom-color: rgb(54, 54, 54);}
+.triangle.pencil-yellow {border-bottom-color: rgb(223, 223, 90);}
+.triangle.pencil-metal {border-bottom-color: lightgray;}
+.triangle.pencil-rubber {border-bottom-color: rgb(228, 116, 116);}
 
 // Skateboard Colors
-:global(.triangle.skateboard-griptape) {border-bottom-color: rgb(58, 58, 58);}
-:global(.triangle.skateboard-wood) {border-bottom-color: rgb(231, 179, 129);}
-:global(.triangle.skateboard-graphic) {border-bottom-color: rgb(118, 201, 41);}
-:global(.triangle.skateboard-trucks) {border-bottom-color: rgb(140, 155, 160);}
-:global(.triangle.skateboard-wheels) {border-bottom-color: rgb(243, 243, 215);}
+.triangle.skateboard-griptape {border-bottom-color: rgb(58, 58, 58);}
+.triangle.skateboard-wood {border-bottom-color: rgb(231, 179, 129);}
+.triangle.skateboard-graphic {border-bottom-color: rgb(118, 201, 41);}
+.triangle.skateboard-trucks {border-bottom-color: rgb(140, 155, 160);}
+.triangle.skateboard-wheels {border-bottom-color: rgb(243, 243, 215);}
 
 // Tick Colours
-:global(.triangle.tick-front) {border-bottom-color: $yellow;}
-:global(.triangle.tick-sides) {border-bottom-color: $orange;}
+.triangle.tick-front {border-bottom-color: colors.$yellow;}
+.triangle.tick-sides {border-bottom-color: colors.$orange;}
 
 // Email Colors
-:global(.triangle.email-back) {border-bottom-color: rgb(131, 131, 131);}
-:global(.triangle.email-bottom) {border-bottom-color: rgb(192, 192, 192);}
-:global(.triangle.email-flap) {border-bottom-color: rgb(202, 201, 201); backface-visibility: visible;}
-:global(.triangle.email-inside) {border-bottom-color: rgb(131, 131, 131);}
-:global(.triangle.email-outside) {border-bottom-color: rgb(212, 212, 212);}
-:global(.triangle.email-triangles) {border-bottom-color: rgb(235, 235, 235);}
+.triangle.email-back {border-bottom-color: rgb(131, 131, 131);}
+.triangle.email-bottom {border-bottom-color: rgb(192, 192, 192);}
+.triangle.email-flap {border-bottom-color: rgb(202, 201, 201); backface-visibility: visible;}
+.triangle.email-inside {border-bottom-color: rgb(131, 131, 131);}
+.triangle.email-outside {border-bottom-color: rgb(212, 212, 212);}
+.triangle.email-triangles {border-bottom-color: rgb(235, 235, 235);}
 .letter { background-color: white;}
 
 
-:global(.triangle.icosphere) {
+.triangle.icosphere {
     border-bottom-color: rgba(255,0,0,0.2);
 }
 
-:global(.triangle.website-inside) {
+.triangle.website-inside {
     border-bottom-color: rgb(4, 150, 218);
 }
-:global(.triangle.website-outside) {
+.triangle.website-outside {
     border-bottom-color: rgb(4, 150, 218);
 }
 
@@ -152,13 +152,13 @@
     transform: scaleX(-1);
 }
 .letter {
-    border: 4px solid $bg-dark;
+    border: 4px solid colors.$bg-dark;
     border-bottom-width: 0;
     font-size: 100px;
     text-align: center;
     width: 350px;
     height: 240px;
-    color: $bg-dark;
+    color: colors.$bg-dark;
     transform: translate(-50%, -50%);
     animation: letter 10s ease infinite;
     animation-delay: 3s;

@@ -20,6 +20,7 @@
     "dae2css":"https://esm.sh/dae2css@1.2.0",
     "preact-render-to-string": "https://esm.sh/preact-render-to-string@6.5.13",
     "preact": "https://esm.sh/preact@10.26.4",
-    "preact/hooks": "https://esm.sh/preact@10.26.4/hooks"
+    "preact/hooks": "https://esm.sh/preact@10.26.4/hooks",
+    "sass": "npm:sass@1.85.1"
   }
 }

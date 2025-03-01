@@ -1,4 +1,4 @@
-@import '../util/colors.module.scss';
+@use '../util/colors.scss';
 
 .project {
     // overflow: hidden;
@@ -6,7 +6,7 @@
     padding-bottom: 50px;
 
     .title {
-        color: $orange;
+        color: colors.$orange;
         padding: 0;
         margin: 0;
         font-size: calc(max(10vw, 40px)); 
@@ -14,12 +14,12 @@
         font-weight: 400;
     }
     .tagline {
-        color: $blue;
+        color: colors.$blue;
         margin: 0; 
         padding: 0; 
         font-size: calc(max(4vw, 24px));  
         line-height: 80%; 
-        text-shadow: 1px 1px $bg-dark;
+        text-shadow: 1px 1px colors.$bg-dark;
     }
 }
 
@@ -31,13 +31,13 @@
     margin-right: 20px;
     padding: 3px;
     border-radius: 6px;
-    background-color: $red;
+    background-color: colors.$red;
     color: white;
 }
 
 .container {
     position: relative;
-    color: $off-white;
+    color: colors.$off-white;
     margin-left: 4vw;
 
     img{
@@ -73,8 +73,8 @@
 }
 
 .frame3d:hover, .frame3d:focus {
-    :global(.triangle) {
-        outline: 2px solid $red;
+    .triangle {
+        outline: 2px solid colors.$red;
     }    
 }
 
