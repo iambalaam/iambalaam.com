@@ -2,10 +2,12 @@ import { parseArgs } from "jsr:@std/cli/parse-args";
 const args = parseArgs(Deno.args, { string: "outDir" });
 
 if (!("outDir" in args)) throw new Error("missing argument --outDir");
+const OUT_DIR = args.outDir;
+if (!OUT_DIR) throw new Error("Empty argument --outDir");
 try {
-  await Deno.readDirSync(args.outDir ?? "");
+  await Deno.readDirSync(OUT_DIR);
 } catch (e) {
-  throw new Error(`Can't read outDir '${args.outDir}'`);
+  await Deno.mkdir(OUT_DIR, { recursive: true });
 }
 
 import * as sass from "sass";
