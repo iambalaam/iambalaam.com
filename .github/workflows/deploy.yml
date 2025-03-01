@@ -24,9 +24,7 @@ jobs:
           deno-version: v2.x
 
       - name: Build step
-        run: |
-          deno task build:models
-          deno task build:styles
+        run: "deno task build:models deno task build:styles "
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
@@ -34,3 +32,5 @@ jobs:
           project: "guybalaam-iambalaamco-97"
           entrypoint: "src/main.tsx"
           root: ""
+          
+          
