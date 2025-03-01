@@ -1,21 +1,27 @@
-import { renderCSSTriangles, requiredCSSRules } from 'dae2css';
-import { resolve } from 'path';
-import { readdirSync, writeFileSync } from 'fs'
+import { renderCSSTriangles, requiredCSSRules } from "dae2css";
+import { resolve } from "@std/path";
 
-const MODEL_DIR = resolve(__dirname, '..', 'models');
-const modelFiles = readdirSync(MODEL_DIR);
+const MODEL_DIR = resolve("./models");
 
-(async () => {
+for await (const file of Deno.readDir(MODEL_DIR)) {
+  if (!file.isFile) continue;
+  const [name, ext] = file.name.split(".");
+  if (ext !== "dae") continue;
 
-    for (const file of modelFiles) {
-        const [filename, ext] = file.split('.');
-        if (ext !== 'dae') continue;
+  const html = await renderCSSTriangles(
+    `${MODEL_DIR}/${file.name}`,
+    200,
+    `triangle ${name}`,
+  );
 
-        const html = await renderCSSTriangles(`${MODEL_DIR}/${file}`, 200, `triangle ${filename}`);
-        const htmlTemplateFile = `${MODEL_DIR}/${file.replace('.dae', '.xhtml.js')}`;
-        writeFileSync(htmlTemplateFile, `module.exports = { html: '${html}' }`);
-    }
+  const destinationFile = `${MODEL_DIR}/${name}.xhtml.ts`;
+  const encoder = new TextEncoder();
+  const text = encoder.encode(`export const html = \`${html}\`;`);
+  Deno.writeFile(destinationFile, text);
+}
 
-    writeFileSync(`${MODEL_DIR}/required.module.scss`, `:global .triangle {${requiredCSSRules}}`);
-
-})()
+const encoder = new TextEncoder();
+await Deno.writeFile(
+  `${MODEL_DIR}/required.css`,
+  encoder.encode(`.triangle {${requiredCSSRules}}`),
+);

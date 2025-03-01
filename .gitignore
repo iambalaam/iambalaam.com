@@ -6,6 +6,6 @@ dist/
 worker/
 
 # Artifacts created from 3d models
-models/*.xhtml.js
-models/required.module.scss
+models/*.xhtml.ts
+models/required.css
 *.blend1

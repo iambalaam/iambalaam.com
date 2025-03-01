@@ -1,33 +1,28 @@
-import * as React from 'react';
-import { NavLink, useLocation } from 'react-router-dom'
-import GithubCorner from './GithubCorner';
+/** @jsx h */
+import { h } from "preact";
+import GithubCorner from "./GithubCorner.tsx";
 
-import * as s from './Header.module.scss';
-
-export default function Header() {
-    const path: string = useLocation().pathname;
-    return (<>
-        <header className={s.header}>
-            <GithubCorner />
-            <div className={s.top}>
-                <span className={s.static}>
-                    <span className={s.me}>Guy Balaam</span>
-                    <span className={s.typeof}>:&nbsp;</span>
-                </span>
-                <span className={s.typing}>
-                    <span className={s.type}>Software Developer</span>
-                    <span className={s.semicolon}>;</span>
-                </span>
-            </div>
-            <nav>{
-                ['About', 'Experience', 'Projects', 'Contact'].map((Route) => {
-                    const route = Route.toLowerCase();
-                    const target = '/' + route;
-                    return (path === target)
-                        ? <span key={Route} className={s.selected}>{Route}</span>
-                        : <NavLink key={Route} to={target}>{Route}</NavLink>
-                })
-            }</nav>
-        </header>
-    </>);
+export default function Header({ path }: { path: string }) {
+    return <header className={'header'}>
+        <GithubCorner />
+        <div className={'top'}>
+            <span className={'static'}>
+                <span className={'me'}>Guy Balaam</span>
+                <span className={'typeof'}>:&nbsp;</span>
+            </span>
+            <span className={'typing'}>
+                <span className={'type'}>Software Developer</span>
+                <span className={'semicolon'}>;</span>
+            </span>
+        </div>
+        <nav>
+            {["About", "Experience", "Projects", "Contact"].map((Route) => {
+                const route = Route.toLowerCase();
+                const target = "/" + route;
+                return (path === target)
+                    ? <span key={Route} className={'selected'}>{Route}</span>
+                    : <a key={Route} href={target}>{Route}</a>;
+            })}
+        </nav>
+    </header>
 }

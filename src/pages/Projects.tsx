@@ -1,20 +1,9 @@
-import * as React from 'react';
-import Project from '../components/Project';
-import * as s from '../components/Project.module.scss';
-import { Pencil, RewiredBot, WebsiteInside, WebsiteOutside } from '../components/Models';
+/** @jsx h */
+import { h, Fragment } from 'preact';
+import Project from '../components/Project.tsx';
+import { Pencil, RewiredBot, WebsiteInside, WebsiteOutside } from '../components/Models.tsx';
 
-import RewiredLogo from '../../static/rewired-logo.jpg';
-import RewiredFallOff from '../../static/rewired-fall-off.gif';
-
-import Jousting from '../../static/jousting.gif';
-
-import Cat from '../../static/photoshop-js-cat.gif';
-import Lightsaber from '../../static/lightsaber.gif';
-
-import Cloudflare from '../../static/cloudflare.jpg';
-import GithubActions from '../../static/github-actions.jpg';
-
-import { Link } from '../util/types';
+import { Link } from '../util/types.ts';
 
 // Links
 const unity: Link = { text: 'Unity', href: 'https://unity.com/' };
@@ -36,10 +25,10 @@ export default function Projects() {
                 title="Rewired"
                 id="rewired"
                 href={rewiredItch.href}
-                tagline={<>GMTK GameJam 2020: <br className={s.softbreak} />"Out of Control"</>}
+                tagline={<>GMTK GameJam 2020: <br className={'softbreak'} />"Out of Control"</>}
                 techUsed={[unity, rewiredItch]}
                 frame={<RewiredBot />}
-                images={[RewiredLogo, RewiredFallOff]}
+                images={['../../static/rewired-logo.jpg', '../../static/rewired-fall-off.gif']}
                 description={<>
                     <p>
                         I teamed up with <a href="https://arnovanavermaet.artstation.com/" target="_blank">Arno Van Avermaet</a>, a 3D artist, for the GMTK 2020 Game Jam - all the amazing modelling and texturing is his work, all the game logic and programming is mine.
@@ -67,10 +56,10 @@ export default function Projects() {
                 title="Jousting"
                 id="jousting"
                 href={joustingItch.href}
-                tagline={<>GMTK GameJam 2019: <br className={s.softbreak} />"Only One"</>}
+                tagline={<>GMTK GameJam 2019: <br className={'softbreak'} />"Only One"</>}
                 techUsed={[p5js, socketIO, heroku, joustingItch]}
                 frame={<WebsiteOutside />}
-                images={[Jousting]}
+                images={['../../static/jousting.gif']}
                 description={<>
                     <p>
                         The brief for this game jam was "<em>Only One</em>".
@@ -95,7 +84,7 @@ export default function Projects() {
                 href="https://iambalaam.github.io/JSToys/photoshop-js/"
                 techUsed={[vanillaJS]}
                 frame={<Pencil />}
-                images={[Cat, Lightsaber]}
+                images={['../../static/photoshop-js-cat.gif', '../../static/lightsaber.gif']}
                 description={<>
                     <p>
                         Drawing anything in the browser that isn't a circle or a rectangle normally relies on rendering pixels on a bitmap canvas.
@@ -139,7 +128,7 @@ export default function Projects() {
                 tagline="Back End"
                 techUsed={[cloudflareWorkers, githubActions, reactJS]}
                 frame={<WebsiteInside />}
-                images={[Cloudflare, GithubActions]}
+                images={['../../static/cloudflare.jpg', '../../static/github-actions.jpg']}
                 description={<>
                     <p>
                         I wanted to serve this website in a unique way, with as few moving parts as possible.

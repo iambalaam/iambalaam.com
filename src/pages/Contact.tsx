@@ -1,6 +1,7 @@
-import * as React from 'react';
-import Project from '../components/Project';
-import { Email } from '../components/Models';
+/** @jsx h */
+import { h, Fragment } from 'preact';
+import Project from '../components/Project.tsx';
+// import { Email } from '../components/Models.tsx';
 
 export default function Contact() {
     return (<>
@@ -8,7 +9,8 @@ export default function Contact() {
             title="Get in touch"
             id="contact"
             techUsed={[]}
-            frame={<Email />}
+            // frame={<Email />}
+            frame={<></>}
             description={
                 <p>
                     Let's work together!

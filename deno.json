@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "strict": true,
+        "jsx": "react",
+        "jsxFactory": "h",
+        "jsxFragmentFactory":"Fragment",
+        "lib": [
+            "dom",
+            "esnext",
+            "webworker",
+            "deno.ns"
+        ]
+  },
+  "tasks": {
+    "build": "deno run --allow-read=models --allow-write=models scripts/generate-models.ts"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1",
+    "@std/path": "jsr:@std/path@1",
+    "dae2css":"https://esm.sh/dae2css@1.2.0",
+    "preact-render-to-string": "https://esm.sh/preact-render-to-string@6.5.13",
+    "preact": "https://esm.sh/preact@10.26.4",
+    "preact/hooks": "https://esm.sh/preact@10.26.4/hooks"
+  }
+}

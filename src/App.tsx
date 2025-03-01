@@ -1,26 +1,24 @@
-import * as React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import './App.module.scss';
+/** @jsx h */
+import { h } from 'preact';
 
-import Header from './components/Header';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Experience from './pages/Experience';
-import Contact from './pages/Contact';
-import NotFound from './pages/404';
+import Header from './components/Header.tsx';
+import About from './pages/About.tsx';
+import Projects from './pages/Projects.tsx';
+import Experience from './pages/Experience.tsx';
+import Contact from './pages/Contact.tsx';
+import NotFound from './pages/404.tsx';
 
-const App = () =>
+const App = ({ path }: { path: string }) =>
     <div id="app">
-        <Header />
+        <Header path={path} />
         <main>
-            <Switch>
-                <Redirect exact path="/" to="/about" />
-                <Route exact path='/about' component={About} />
-                <Route exact path='/experience' component={Experience} />
-                <Route exact path='/projects' component={Projects} />
-                <Route exact path='/contact' component={Contact} />
-                <Route render={(routeProps) => (<NotFound {...routeProps} />)} />
-            </Switch>
+            {{
+                '/': <About />,
+                '/about': <About />,
+                '/experience': <Experience />,
+                '/projects': <Projects />,
+                '/contact': <Contact />,
+            }[path] ?? <NotFound path={path} />}
         </main>
     </div>
 

@@ -1,8 +1,9 @@
-import * as React from 'react';
+/** @jsx h */
+import { h, Fragment } from 'preact';
 
-import { Tick } from '../components/Models';
-import Project from '../components/Project';
-import { Link } from '../util/types';
+import { Tick } from '../components/Models.tsx';
+import Project from '../components/Project.tsx';
+import { Link } from '../util/types.ts';
 
 const reactJS: Link = { text: 'React', href: 'https://reactjs.org/' };
 const express: Link = { text: 'Express', href: 'https://expressjs.com/' };

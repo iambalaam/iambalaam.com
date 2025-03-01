@@ -1,7 +1,8 @@
-import * as React from 'react';
-import { Skateboard } from '../components/Models';
+/** @jsx h */
+import { h, Fragment } from 'preact';
+// import { Skateboard } from '../components/Models.tsx';
 
-import Project from '../components/Project';
+import Project from '../components/Project.tsx';
 
 export default function About() {
     return (<>
@@ -9,7 +10,8 @@ export default function About() {
             title="About me"
             id="about"
             techUsed={[]}
-            frame={<Skateboard />}
+            // frame={<Skateboard />}
+            frame={<></>}
             description={<>
                 <p>
                     Hi, I'm Guy.

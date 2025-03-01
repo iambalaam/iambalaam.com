@@ -1,11 +1,14 @@
+const BUILD_COMMIT = Deno.env.get("BUILD_COMMIT") ?? "Unknown";
+
 export interface PageArgs {
-    title: string,
-    desc: string,
-    content: string,
-    head?: string
+  title: string;
+  desc: string;
+  content: string;
+  head?: string;
 }
 
-const head = ({ title, desc, head }: PageArgs) => `\
+const head = ({ title, desc, head }: PageArgs) =>
+  `\
 <head>
     <meta charset="utf-8">
     <title>${title}</title>
@@ -27,12 +30,12 @@ const head = ({ title, desc, head }: PageArgs) => `\
 
     <!-- Static Resources -->
     <link rel="stylesheet" type="text/css" href="/static/${BUILD_COMMIT}/dist/main.css">
-    <script type="text/javascript" src="/static/${BUILD_COMMIT}/dist/hydration.js" defer></script>
-    ${head || ''}
+    ${head || ""}
 </head>
 `;
 
-const body = ({ content }: PageArgs) => `\
+const body = ({ content }: PageArgs) =>
+  `\
 <body>
     <div id="root">
         ${content}
@@ -40,7 +43,8 @@ const body = ({ content }: PageArgs) => `\
 </body>
 `;
 
-const html = (args: PageArgs) => `\
+const html = (args: PageArgs) =>
+  `\
 <!DOCTYPE html>
 <html lang="en">
 ${head(args)}

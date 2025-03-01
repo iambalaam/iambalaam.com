@@ -1,20 +1,21 @@
-import * as React from 'react';
-import { RouteComponentProps } from 'react-router'
-import Project from '../components/Project';
+/** @jsx h */
+import { h, Fragment } from 'preact';
+import { useContext } from 'preact/hooks';
 
-const NotFound: React.SFC<RouteComponentProps> = (props: RouteComponentProps) => {
-    const { staticContext, location } = props;
-    if (staticContext) staticContext.statusCode = 404;
-    const page = location
-        ? location.pathname
-        : 'this page'
+
+import Project from '../components/Project.tsx';
+import { StatusCtx } from "../main.tsx";
+
+const NotFound = ({ path }: { path: string }) => {
+    const ctx = useContext(StatusCtx);
+    ctx.status = 404;
     return (
         <Project
             title="404"
             techUsed={[]}
             frame={<></>}
             tagline="Page not found"
-            description={`Apologies, I haven't made ${page} yet!`}
+            description={`Apologies, I haven't made ${path} yet!`}
         />
     )
 }
