@@ -12,7 +12,8 @@
         ]
   },
   "tasks": {
-    "build": "deno run --allow-read=models --allow-write=models scripts/generate-models.ts"
+    "build:models": "deno run --allow-read=models --allow-write=models scripts/build-models.ts",
+    "build:styles": "deno run --allow-read --allow-env --allow-write=. scripts/build-styles.ts --outDir=dist/static" 
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1",
