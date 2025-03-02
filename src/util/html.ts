@@ -29,7 +29,6 @@ const head = ({ title, desc, head }: PageArgs) =>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Static Resources -->
-    <link rel="stylesheet" type="text/css" href="/static/${BUILD_COMMIT}/dist/main.css">
     ${head || ""}
 </head>
 `;

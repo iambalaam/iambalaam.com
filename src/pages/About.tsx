@@ -1,6 +1,6 @@
 /** @jsx h */
 import { h, Fragment } from 'preact';
-// import { Skateboard } from '../components/Models.tsx';
+import { Skateboard } from '../components/Models.tsx';
 
 import Project from '../components/Project.tsx';
 
@@ -10,8 +10,7 @@ export default function About() {
             title="About me"
             id="about"
             techUsed={[]}
-            // frame={<Skateboard />}
-            frame={<></>}
+            frame={<Skateboard />}
             description={<>
                 <p>
                     Hi, I'm Guy.

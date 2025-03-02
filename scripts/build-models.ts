@@ -8,10 +8,14 @@ for await (const file of Deno.readDir(MODEL_DIR)) {
   const [name, ext] = file.name.split(".");
   if (ext !== "dae") continue;
 
-  const html = await renderCSSTriangles(
-    `${MODEL_DIR}/${file.name}`,
-    200,
-    `triangle ${name}`,
+  // Hack
+  // Investigate where URI encoding is coming from
+  let html = decodeURIComponent(
+    await renderCSSTriangles(
+      `${MODEL_DIR}/${file.name}`,
+      200,
+      `triangle ${name}`,
+    ),
   );
 
   const destinationFile = `${MODEL_DIR}/${name}.xhtml.ts`;
