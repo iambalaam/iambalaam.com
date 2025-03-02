@@ -1,28 +1,40 @@
 /** @jsx h */
 import { h, createContext } from 'preact';
+import { route, Route } from '@std/http/unstable-route'
+import { serveDir } from "@std/http/file-server";
 import { render } from 'preact-render-to-string';
 
 import htmlDocument from './util/html.ts';
 import App from './App.tsx';
-import { buildStyles, hashString } from "../scripts/build-styles.ts";
 
-console.log('Creating styles');
-const styles = await buildStyles();
-const cssHash = hashString(styles);
-const cssPath = `/static/main.${cssHash}.css`;
+// Find css
+const cssFiles = [];
+try {
+    for await (const file of Deno.readDir('dist/static')) {
+        if (file.name.endsWith('.css')) {
+            cssFiles.push(`static/${file.name}`);
+        }
+    }
+} catch (_err) {
+    throw new Error('Could not find dist/static');
+}
+if (cssFiles.length === 0) throw new Error('Could not find css files');
+if (cssFiles.length > 1) throw new Error(`Multiple css files found ${cssFiles.join(', ')}`);
+const cssFile = cssFiles[0]!;
 
 const defaultCtx = { status: 503 };
 export const StatusCtx = createContext(defaultCtx);
 
-function handler(req: Request): Response {
+const routes: Route[] = [
+    {
+        pattern: new URLPattern({ pathname: '/static/*' }),
+        handler: (req) => serveDir(req, { fsRoot: 'dist', })
+    }
+];
+
+function indexHtmlHandler(req: Request): Response {
     const ctx = { status: 200 };
     const { pathname } = new URL(req.url);
-
-    if (pathname === cssPath) {
-        const response = new Response(styles);
-        response.headers.set('content-type', 'text/css');
-        return response;
-    }
 
     try {
         const content = render(<StatusCtx.Provider value={ctx}>
@@ -33,7 +45,7 @@ function handler(req: Request): Response {
         return new Response(htmlDocument({
             title: 'iambalaam.com',
             desc: 'Guy Balaam: Software Developer;',
-            head: `<link rel="stylesheet" href="${cssPath}">`,
+            head: `<link rel="stylesheet" href="${cssFile}">`,
             content
         }), { status: ctx.status || 200, headers: { 'content-type': 'text/html; charset=UTF-8' } });
     } catch (_err) {
@@ -46,4 +58,4 @@ function handler(req: Request): Response {
 }
 
 console.log('Starting server')
-Deno.serve(handler)
+Deno.serve(route(routes, indexHtmlHandler));

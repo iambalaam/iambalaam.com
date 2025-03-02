@@ -10,7 +10,7 @@ for await (const file of Deno.readDir(MODEL_DIR)) {
 
   // Hack
   // Investigate where URI encoding is coming from
-  let html = decodeURIComponent(
+  const html = decodeURIComponent(
     await renderCSSTriangles(
       `${MODEL_DIR}/${file.name}`,
       200,
